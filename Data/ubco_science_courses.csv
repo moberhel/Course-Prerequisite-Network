@@ -1,0 +1,552 @@
+course_code,subject,department,course_number,level,level_group,title,credits,prerequisite_expr,corequisite_expr,other_requirements,recommended,credit_exclusions_or_equivalents,has_course_prerequisite,n_prereq_edges
+ASTR 110,ASTR,Astronomy,110,100,undergraduate,Astrophysics: The Solar System and Planets,3,,,,Foundations of Mathematics 12 / Pre-Calculus 12 / Principles of Mathematics 11 and Physics 11 (high school),"ASTR 111,ASTR 112",0,0
+ASTR 111,ASTR,Astronomy,111,100,undergraduate,Astronomy: The Solar System and Planets,3,,,,Foundations of Mathematics 11 strongly recommended,"ASTR 110,ASTR 112",0,0
+ASTR 112,ASTR,Astronomy,112,100,undergraduate,Astronomy: The Solar System and Planets,3,,,,Foundations of Mathematics 11 strongly recommended,"ASTR 110,ASTR 111",0,0
+ASTR 120,ASTR,Astronomy,120,100,undergraduate,"Astrophysics: Stars, Galaxies, and Cosmology",3,,,,One of Foundations of Mathematics 12 / Pre-Calculus 11 / Principles of Mathematics 11 and Physics 11 (high school),"ASTR 121,ASTR 122",0,0
+ASTR 121,ASTR,Astronomy,121,100,undergraduate,"Astronomy: Stars, Galaxies, and Cosmology",3,,,,Foundations of Mathematics 11 strongly recommended,"ASTR 120,ASTR 122",0,0
+ASTR 122,ASTR,Astronomy,122,100,undergraduate,"Astronomy: Stars, Galaxies, and Cosmology",3,,,,Foundations of Mathematics 11 strongly recommended,"ASTR 120,ASTR 121",0,0
+ASTR 210,ASTR,Astronomy,210,200,undergraduate,Physical Processes in the Universe,3,"MATH 101,MATH 103;PHYS 121,PHYS 122",,,,,1,4
+ASTR 321,ASTR,Astronomy,321,300,undergraduate,Stellar Astrophysics,3,PHYS 200;ASTR 210,PHYS 216,,MATH 225 recommended,PHYS 321,1,2
+ASTR 401,ASTR,Astronomy,401,400,undergraduate,Astrophysical Processes,3,"PHYS 301;ASTR 321,PHYS 321",,,PHYS 324 recommended,ASTR 501,1,3
+ASTR 411,ASTR,Astronomy,411,400,undergraduate,Radio Astronomy,3,,"ASTR 321,PHYS 321",,,ASTR 511,0,0
+ASTR 501,ASTR,Astronomy,501,500,graduate,Astrophysical Processes,3,,,,,ASTR 401,0,0
+ASTR 511,ASTR,Astronomy,511,500,graduate,Radio Astronomy,3,,,,,ASTR 411,0,0
+BIOC 211,BIOC,Biochemistry,211,200,undergraduate,Chemical and Biochemical Analysis,3,"CHEM 113,CHEM 123;PHYS 121,PHYS 122",,,,CHEM 211,1,4
+BIOC 304,BIOC,Biochemistry,304,300,undergraduate,Molecular Biochemistry I,3,"CHEM 204,CHEM 214",,,,BIOL 311,1,2
+BIOC 305,BIOC,Biochemistry,305,300,undergraduate,Molecular Biochemistry II,3,BIOC 304;BIOL 200,,,,BIOL 319,1,2
+BIOC 307,BIOC,Biochemistry,307,300,undergraduate,Enology I,3,"CHEM 204,CHEM 214",,,,,1,2
+BIOC 308,BIOC,Biochemistry,308,300,undergraduate,Pharmacology I,3,"BIOL 200;CHEM 204,CHEM 214",,,,,1,3
+BIOC 309,BIOC,Biochemistry,309,300,undergraduate,Pharmacology II,3,BIOC 308,,,,,1,1
+BIOC 310,BIOC,Biochemistry,310,300,undergraduate,Plant Chemistry,3,"CHEM 204,CHEM 214;BIOL 200,BIOL 210,BIOL 319,BIOC 305",,,,,1,6
+BIOC 393,BIOC,Biochemistry,393,300,undergraduate,Biochemistry Laboratory,3,"BIOC 304;BIOL 200,BIOL 228,CHEM 204,CHEM 214",BIOL 366,,,BIOL 393,1,5
+BIOC 402,BIOC,Biochemistry,402,400,undergraduate,Proteins: Structure and Function,3,"BIOC 304,BIOL 311",,,,,1,2
+BIOC 403,BIOC,Biochemistry,403,400,undergraduate,Enzymology,3,"BIOC 304,BIOL 311",,,,"CHEM 403,CHEM 569",1,2
+BIOC 405,BIOC,Biochemistry,405,400,undergraduate,Lipids and Biomembranes,3,"BIOC 304,BIOL 311",,,,,1,2
+BIOC 406,BIOC,Biochemistry,406,400,undergraduate,Natural Product Biosynthesis and Synthetic Biology,3,"CHEM 204,CHEM 214;BIOC 310;BIOL 319;BIOC 305",,,,"CHEM 485,CHEM 585",1,5
+BIOC 407,BIOC,Biochemistry,407,400,undergraduate,The Biochemical Basis of Disease,3,"BIOC 305,BIOL 319",,,,BIOL 507,1,2
+BIOC 410,BIOC,Biochemistry,410,400,undergraduate,DNA Nanotechnology,3,BIOL 366,,,,CHEM 592,1,1
+BIOC 412,BIOC,Biochemistry,412,400,undergraduate,Methods in Metabolomics,3,"CHEM 211,BIOC 211",,Fourth-year standing in Biochemistry,,"CHEM 412,CHEM 533",1,2
+BIOC 420,BIOC,Biochemistry,420,400,undergraduate,Special Topics in Biochemistry,3-9,,,Third-year standing in any B.Sc. program and permission of department head,,,0,0
+BIOC 425,BIOC,Biochemistry,425,400,undergraduate,Biocatalysis,3,"BIOC 304,BIOL 311",,,,CHEM 591,1,2
+BIOC 448,BIOC,Biochemistry,448,400,undergraduate,Directed Studies in Biochemistry,3-6,,,Fourth-year standing in Major in Biochemistry and Molecular Biology with min 72% average and permission of supervisor's department,,,0,0
+BIOC 449,BIOC,Biochemistry,449,400,undergraduate,Honours Thesis,6,,,"Fourth-year standing in Major in Biochemistry and Molecular Biology with min 76% average, research project, permission of supervisor's department",,"BIOC 450,BIOC 451",0,0
+BIOC 450,BIOC,Biochemistry,450,400,undergraduate,Honours Thesis Part I,3,,,Permission of supervisor's department; restricted to Biochemistry and Molecular Biology Honours,,BIOC 449,0,0
+BIOC 451,BIOC,Biochemistry,451,400,undergraduate,Honours Thesis Part II,3,BIOC 450,,,,BIOC 449,1,1
+BIOC 477,BIOC,Biochemistry,477,400,undergraduate,Molecular and Cellular Biophysics,3,,,,,"CHEM 477,CHEM 577",0,0
+BIOC 494,BIOC,Biochemistry,494,400,undergraduate,Biotechnology Laboratory I: DNA Manipulation,3,"BIOC 393,BIOL 393",,,BIOL 366 strongly recommended,,1,2
+BIOC 495,BIOC,Biochemistry,495,400,undergraduate,Biotechnology Laboratory II: Gene Expression,3,"BIOL 366;BIOC 393,BIOL 393",,,,,1,3
+BIOC 530,BIOC,Biochemistry,530,500,graduate,Biochemistry Seminar,3,,,Admission to Biochemistry and Molecular Biology graduate program,,BIOC 630,0,0
+BIOC 549,BIOC,Biochemistry,549,500,graduate,M.Sc. Thesis,21,,,,,,0,0
+BIOC 649,BIOC,Biochemistry,649,600,graduate,Ph.D. Thesis,0,,,,,,0,0
+BIOL 116,BIOL,Biology,116,100,undergraduate,Biology for Science Majors I,3,,,High school: either (a) Chemistry 11 and one of Life Science 11/Anatomy and Physiology 12; or (b) Chemistry 11 and one of Biology 11/12,"Corequisite: one of CHEM 111, CHEM 121 recommended","BIOL 117,BIOL 122",0,0
+BIOL 117,BIOL,Biology,117,100,undergraduate,Evolution and Ecology,3,,,,,"BIOL 116,BIOL 125",0,0
+BIOL 122,BIOL,Biology,122,100,undergraduate,Physiology of Multicellular Organisms,3,,,,,"BIOL 116,BIOL 125,HES 101,HES 111,HMKN 190,HMKN 191",0,0
+BIOL 125,BIOL,Biology,125,100,undergraduate,Biology for Science Majors II,3,BIOL 116,,,"Corequisite: one of CHEM 113, CHEM 123 recommended","BIOL 117,BIOL 122",1,1
+BIOL 131,BIOL,Biology,131,100,undergraduate,Human Anatomy and Physiology I,3,BIOL 122,,"Alternative to BIOL 122: high school (Life Science 11 or Anatomy and Physiology 12, plus Chemistry 11) or (Biology 11 or 12, plus Chemistry 11)",,"HES 101,HMKN 190",1,1
+BIOL 133,BIOL,Biology,133,100,undergraduate,Human Anatomy and Physiology II,3,BIOL 131,,,,"HES 111,HMKN 191",1,1
+BIOL 200,BIOL,Biology,200,200,undergraduate,Cell Biology,3,"BIOL 116;CHEM 113,CHEM 123",,Second-year standing,,,1,3
+BIOL 201,BIOL,Biology,201,200,undergraduate,Introduction to Evolution and Ecology,3,BIOL 125,,,,,1,1
+BIOL 202,BIOL,Biology,202,200,undergraduate,Introduction to Biostatistics,3,MATH 100,,,,,1,1
+BIOL 204,BIOL,Biology,204,200,undergraduate,Vertebrate Structure and Function,3,"BIOL 125,BIOL 117+BIOL 122",,,,,1,3
+BIOL 205,BIOL,Biology,205,200,undergraduate,Comparative Invertebrate Zoology,3,"BIOL 125,BIOL 117+BIOL 122",,,,,1,3
+BIOL 209,BIOL,Biology,209,200,undergraduate,Fungi,3,"BIOL 125,BIOL 117+BIOL 122",,,,,1,3
+BIOL 210,BIOL,Biology,210,200,undergraduate,Land Plants,3,"BIOL 125,BIOL 117+BIOL 122",,,,,1,3
+BIOL 228,BIOL,Biology,228,200,undergraduate,Introductory Microbiology,3,BIOL 125,"CHEM 203,CHEM 213",,,,1,1
+BIOL 232,BIOL,Biology,232,200,undergraduate,Human Infectious Disease,3,"BIOL 235,HINT 231",,,,BIOL 314,1,2
+BIOL 265,BIOL,Biology,265,200,undergraduate,Principles of Genetics,3,BIOL 116,,Second-year standing,,BIOL 365,1,1
+BIOL 300,BIOL,Biology,300,300,undergraduate,Advanced Cell Biology,3,BIOL 200,,,,,1,1
+BIOL 301,BIOL,Biology,301,300,undergraduate,Evolutionary Principles and Methods,3,BIOL 201,,,,,1,1
+BIOL 306,BIOL,Biology,306,300,undergraduate,Ecology of Animals,3,BIOL 201;BIOL 202,,,,,1,2
+BIOL 308,BIOL,Biology,308,300,undergraduate,Population Biology,3,"MATH 101,MATH 103;BIOL 201,GEOG 207",,,,,1,4
+BIOL 310,BIOL,Biology,310,300,undergraduate,Applied Plant Science I,3,"BIOL 210;BIOL 202,STAT 230,STAT 205",,Permission of instructor; must register in both BIOL 310 and BIOL 320,,,1,4
+BIOL 312,BIOL,Biology,312,300,undergraduate,Virology,3,BIOL 228,,,,,1,1
+BIOL 313,BIOL,Biology,313,300,undergraduate,Science Writing,3,,,,,,0,0
+BIOL 314,BIOL,Biology,314,300,undergraduate,Medical Microbiology,3,BIOL 228,,,,BIOL 232,1,1
+BIOL 318,BIOL,Biology,318,300,undergraduate,Immunology,3,BIOL 228,,,,,1,1
+BIOL 320,BIOL,Biology,320,300,undergraduate,Applied Plant Science II,3,BIOL 310,,Permission of instructor; must register in both BIOL 310 and BIOL 320,,,1,1
+BIOL 341,BIOL,Biology,341,300,undergraduate,Neurobiology,3,BIOL 200,,,,,1,1
+BIOL 350,BIOL,Biology,350,300,undergraduate,Clinical Neuroscience,3,"BIOL 200,BIOL 341,PSYO 230",,,,,1,3
+BIOL 354,BIOL,Biology,354,300,undergraduate,Cell Physiology,3,"BIOL 200;BIOL 202,STAT 205,STAT 230;PHYS 121,PHYS 122",,,,,1,6
+BIOL 356,BIOL,Biology,356,300,undergraduate,Comparative Animal Physiology,3,BIOL 354,,,,,1,1
+BIOL 357,BIOL,Biology,357,300,undergraduate,Introduction to Entomology,3,"BIOL 201;BIOL 202,STAT 205,STAT 230",,,BIOL 205 recommended,,1,4
+BIOL 358,BIOL,Biology,358,300,undergraduate,Plant Ecophysiology,3,"BIOL 210;BIOL 202,STAT 205,STAT 230",,,,,1,4
+BIOL 359,BIOL,Biology,359,300,undergraduate,Physiology Laboratory,3,BIOL 354,BIOL 356,Restricted to Zoology Major or Honours,,,1,1
+BIOL 363,BIOL,Biology,363,300,undergraduate,Developmental Biology,3,BIOL 200,,,,,1,1
+BIOL 366,BIOL,Biology,366,300,undergraduate,Molecular Genetics,3,"BIOL 265,BIOL 365",,,,,1,2
+BIOL 370,BIOL,Biology,370,300,undergraduate,African Savannah Biology,3,BIOL 201,,,,,1,1
+BIOL 380,BIOL,Biology,380,300,undergraduate,Food and Industrial Microbiology,3,BIOL 228,,,,,1,1
+BIOL 381,BIOL,Biology,381,300,undergraduate,Environmental Microbiology,3,"BIOL 228;CHEM 203,CHEM 213",,,,,1,3
+BIOL 382,BIOL,Biology,382,300,undergraduate,Prokaryotic Physiology,3,"BIOL 228;CHEM 204,CHEM 214",,,,"BIOL 430,BIOL 431,BIOL 432,BIOL 433",1,3
+BIOL 401,BIOL,Biology,401,400,undergraduate,Spatial Ecology,3,"BIOL 202,STAT 205,STAT 230",,,,BIOL 512,1,3
+BIOL 402,BIOL,Biology,402,400,undergraduate,Statistical Modelling for Biological Data,3,BIOL 202,,,,BIOL 502,1,1
+BIOL 406,BIOL,Biology,406,400,undergraduate,Functional Glycoscience,3,"BIOL 200;BIOL 319,BIOC 305",,,,,1,3
+BIOL 410,BIOL,Biology,410,400,undergraduate,Plant-Microbe Interactions,3,BIOL 228,,,,BIOL 510,1,1
+BIOL 413,BIOL,Biology,413,400,undergraduate,Wildfire and Wildlife,3,BIOL 201,,,,,1,1
+BIOL 414,BIOL,Biology,414,400,undergraduate,Advanced Field Ecology,3,"BIOL 202,GEOG 271;BIOL 201,GEOG 207",,,,BIOL 514,1,4
+BIOL 417,BIOL,Biology,417,400,undergraduate,Evolutionary Ecology,3,"BIOL 308;BIOL 202,STAT 205,STAT 230",,,,BIOL 517,1,4
+BIOL 422,BIOL,Biology,422,400,undergraduate,Conservation Biology,3,BIOL 308,,,,BIOL 513,1,1
+BIOL 423,BIOL,Biology,423,400,undergraduate,Endocrinology,3,"BIOL 319,BIOC 305",,,,,1,2
+BIOL 424,BIOL,Biology,424,400,undergraduate,"Global Food Systems: Society, Ecology, Sustainability",3,,,Third-year standing,,MGMT 470,0,0
+BIOL 426,BIOL,Biology,426,400,undergraduate,Cancer Biology,3,"BIOL 311,BIOC 304;BIOL 200;BIOL 265;BIOL 318",,,,,1,5
+BIOL 430,BIOL,Biology,430,400,undergraduate,"Special Topics in Biology, Lecture Format",3-9,,,Permission of department head to repeat with different topic,,"BIOL 431,BIOL 432,BIOL 433,BIOL 530,BIOL 531,BIOL 532,BIOL 533",0,0
+BIOL 431,BIOL,Biology,431,400,undergraduate,"Special Topics in Biology, Laboratory Format",3-9,,,Permission of department head to repeat with different topic,,"BIOL 430,BIOL 432,BIOL 433,BIOL 530,BIOL 531,BIOL 532,BIOL 533",0,0
+BIOL 432,BIOL,Biology,432,400,undergraduate,"Special Topics in Biology, Lecture and Laboratory Format",3-9,,,Permission of department head to repeat with different topic,,"BIOL 430,BIOL 431,BIOL 433,BIOL 530,BIOL 531,BIOL 532,BIOL 533",0,0
+BIOL 433,BIOL,Biology,433,400,undergraduate,"Special Topics in Biology, Experiential Learning Format",3-9,,,Permission of department head to repeat with different topic,,"BIOL 430,BIOL 431,BIOL 432,BIOL 530,BIOL 531,BIOL 532,BIOL 533",0,0
+BIOL 440,BIOL,Biology,440,400,undergraduate,Honours Thesis,6,,,Permission of department head and course supervisor,,"BIOL 450,BIOL 451",0,0
+BIOL 450,BIOL,Biology,450,400,undergraduate,Honours Thesis Part I,3,,,"Permission of department head and course supervisor; restricted to Biology, Zoology, EECB or Microbiology Honours",,BIOL 440,0,0
+BIOL 451,BIOL,Biology,451,400,undergraduate,Honours Thesis Part II,3,BIOL 450,,,,BIOL 440,1,1
+BIOL 452,BIOL,Biology,452,400,undergraduate,Directed Studies in Biology,3-12,,,Permission of Biology department head,,,0,0
+BIOL 459,BIOL,Biology,459,400,undergraduate,Behavioural Ecology,3,BIOL 201,,,,,1,1
+BIOL 460,BIOL,Biology,460,400,undergraduate,Population Genetics,3,BIOL 201,,,,BIOL 560,1,1
+BIOL 461,BIOL,Biology,461,400,undergraduate,Cell Signaling,3,"BIOL 200;BIOL 311,BIOC 304",,,,"BIOL 430,BIOL 431,BIOL 432,BIOL 433",1,3
+BIOL 468,BIOL,Biology,468,400,undergraduate,Molecular Approaches in Ecology and Evolution,3,BIOL 201,,,,BIOL 568,1,1
+BIOL 477,BIOL,Biology,477,400,undergraduate,Bioinformatics,3,BIOL 265,,At least 6 credits of 300-level BIOL or BIOC courses,,"BIOL 577,BIOL 430,BIOL 431,BIOL 432,BIOL 433",1,1
+BIOL 480,BIOL,Biology,480,400,undergraduate,Mycology,3,"BIOL 311,BIOC 304",,,,,1,2
+BIOL 501,BIOL,Biology,501,500,graduate,Biology Seminar,3,,,Required for all Biology M.Sc. students,,,0,0
+BIOL 502,BIOL,Biology,502,500,graduate,Statistical Modelling for Biological Data,3,,,,,BIOL 402,0,0
+BIOL 507,BIOL,Biology,507,500,graduate,The Biochemical Basis of Disease,3,,,Permission of instructor,,BIOC 407,0,0
+BIOL 510,BIOL,Biology,510,500,graduate,Plant-Microbe Interactions,3,,,,,BIOL 410,0,0
+BIOL 512,BIOL,Biology,512,500,graduate,Spatial Ecology,3,,,,,BIOL 401,0,0
+BIOL 513,BIOL,Biology,513,500,graduate,Conservation Biology,3,,,,,BIOL 422,0,0
+BIOL 514,BIOL,Biology,514,500,graduate,Advanced Field Ecology,3,,,,,BIOL 414,0,0
+BIOL 517,BIOL,Biology,517,500,graduate,Evolutionary Ecology,3,,,,,BIOL 417,0,0
+BIOL 530,BIOL,Biology,530,500,graduate,"Special Topics in Biology, Lecture Format",1-9,,,Permission of department head to repeat with different topic,,"BIOL 430,BIOL 431,BIOL 432,BIOL 433,BIOL 531,BIOL 532,BIOL 533",0,0
+BIOL 531,BIOL,Biology,531,500,graduate,"Special Topics in Biology, Laboratory Format",1-9,,,Permission of department head to repeat with different topic,,"BIOL 430,BIOL 431,BIOL 432,BIOL 433,BIOL 530,BIOL 532,BIOL 533",0,0
+BIOL 532,BIOL,Biology,532,500,graduate,"Special Topics in Biology, Lecture and Laboratory Format",1-9,,,Permission of department head to repeat with different topic,,"BIOL 430,BIOL 431,BIOL 432,BIOL 433,BIOL 530,BIOL 531,BIOL 533",0,0
+BIOL 533,BIOL,Biology,533,500,graduate,"Special Topics in Biology, Experiential Learning Format",1-9,,,Permission of department head to repeat with different topic,,"BIOL 430,BIOL 431,BIOL 432,BIOL 433,BIOL 530,BIOL 531,BIOL 532",0,0
+BIOL 552,BIOL,Biology,552,500,graduate,Directed Studies in Biology,3-9,,,Permission of graduate program advisor and course instructor,,,0,0
+BIOL 560,BIOL,Biology,560,500,graduate,Population Genetics,3,,,,,BIOL 460,0,0
+BIOL 568,BIOL,Biology,568,500,graduate,Molecular Approaches in Ecology and Evolution,3,,,,,BIOL 468,0,0
+BIOL 577,BIOL,Biology,577,500,graduate,Bioinformatics,3,,,,,"BIOL 477,BTEC 509",0,0
+BIOL 599,BIOL,Biology,599,500,graduate,M.Sc. Thesis,21,,,,,,0,0
+BIOL 699,BIOL,Biology,699,600,graduate,Ph.D. Thesis,0,,,,,,0,0
+BTEC 500,BTEC,Biotechnology,500,500,graduate,Professional Seminar I,3,,,,,,0,0
+BTEC 501,BTEC,Biotechnology,501,500,graduate,Professional Seminar II,3,,,,,,0,0
+BTEC 504,BTEC,Biotechnology,504,500,graduate,Molecular Cloning Laboratory,3,,,,,,0,0
+BTEC 505,BTEC,Biotechnology,505,500,graduate,Cell and Tissue Culture Laboratory,9,,,,,,0,0
+BTEC 506,BTEC,Biotechnology,506,500,graduate,Advanced Biotechnology Laboratory,9,BTEC 504;BTEC 505,,,,,1,2
+BTEC 509,BTEC,Biotechnology,509,500,graduate,Computational Biology,3,,,,,BIOL 577,0,0
+BTEC 580,BTEC,Biotechnology,580,500,graduate,Biotechnology Capstone I,3,BTEC 500,,Permission of Department Head; restricted to BTEC students; Pass/Fail,,,1,1
+BTEC 581,BTEC,Biotechnology,581,500,graduate,Biotechnology Capstone II,3,"BTEC 580,BTEC 590",,Permission of Department Head; restricted to BTEC students; Pass/Fail,,,1,2
+BTEC 590,BTEC,Biotechnology,590,500,graduate,Biotechnology Internship I,3,,,Restricted to BTEC students with a secured work term; Pass/Fail,,,0,0
+BTEC 591,BTEC,Biotechnology,591,500,graduate,Biotechnology Internship II,3,BTEC 590,,Restricted to BTEC students with a secured work term; Pass/Fail,,,1,1
+BTEC 592,BTEC,Biotechnology,592,500,graduate,Biotechnology Internship III,3,BTEC 591,,Restricted to BTEC students with a secured work term; Pass/Fail,,,1,1
+CHEM 121,CHEM,Chemistry,121,100,undergraduate,Atomic and Molecular Chemistry,3,,,High school: Chemistry 11,Chemistry 12 and Principles of Math 12/Pre-Calculus 12 strongly recommended,CHEM 111,0,0
+CHEM 123,CHEM,Chemistry,123,100,undergraduate,Physical and Organic Chemistry,3,CHEM 121,,,,CHEM 113,1,1
+CHEM 201,CHEM,Chemistry,201,200,undergraduate,Introduction to Physical Chemistry,3,"MATH 101,MATH 103;PHYS 121,PHYS 122;CHEM 113,CHEM 123",,,Min 65% in CHEM 113 strongly recommended; MATH 200 strongly recommended,CHEM 210,1,6
+CHEM 203,CHEM,Chemistry,203,200,undergraduate,Introduction to Organic Chemistry,3,"CHEM 113,CHEM 123",,"For Chemistry, Biochemistry, Environmental Chemistry majors, Chemistry minors, BSUST Green Chemistry; others take CHEM 213",Min 65% in CHEM 113 strongly recommended,CHEM 213,1,2
+CHEM 204,CHEM,Chemistry,204,200,undergraduate,Organic Chemistry,3,CHEM 203,,"For Chemistry, Biochemistry, Environmental Chemistry majors, Chemistry minors, BSUST Green Chemistry; others take CHEM 214",,CHEM 214,1,1
+CHEM 210,CHEM,Chemistry,210,200,undergraduate,"Physical Chemistry for Earth, Environmental, and Life Sciences",3,"MATH 101,MATH 103;PHYS 121,PHYS 122;CHEM 113,CHEM 123",,Cannot be used for credit by Chemistry Majors,Min 65% in CHEM 113 strongly recommended,CHEM 201,1,6
+CHEM 211,CHEM,Chemistry,211,200,undergraduate,Analytical Chemistry,3,"CHEM 113,CHEM 123;PHYS 121,PHYS 122",,,,BIOC 211,1,4
+CHEM 213,CHEM,Chemistry,213,200,undergraduate,Organic Chemistry for Biological Sciences I,3,"CHEM 113,CHEM 123",,"Not for Chemistry, Biochemistry, or Environmental Chemistry majors (take CHEM 203)",,CHEM 203,1,2
+CHEM 214,CHEM,Chemistry,214,200,undergraduate,Organic Chemistry for Biological Sciences II,3,"CHEM 203,CHEM 213",,"Not for Chemistry, Biochemistry, or Environmental Chemistry majors (take CHEM 204)",,CHEM 204,1,2
+CHEM 220,CHEM,Chemistry,220,200,undergraduate,Atomic Structure and Molecular Bonding,3,"CHEM 113,CHEM 123",,,Min 65% in CHEM 113 strongly recommended,,1,2
+CHEM 301,CHEM,Chemistry,301,300,undergraduate,Aqueous Environmental Chemistry,3,"MATH 101,MATH 103;CHEM 201,CHEM 210",,,,,1,4
+CHEM 302,CHEM,Chemistry,302,300,undergraduate,Atmospheric Environmental Chemistry,3,"MATH 101,MATH 103;CHEM 113,CHEM 123;PHYS 121,PHYS 122",,,"One of CHEM 210, CHEM 211 recommended",,1,6
+CHEM 304,CHEM,Chemistry,304,300,undergraduate,Advanced Physical Chemistry,3,CHEM 201,,,MATH 200 recommended,,1,1
+CHEM 305,CHEM,Chemistry,305,300,undergraduate,Biophysical Chemistry,3,"CHEM 201,CHEM 210",,,MATH 200 strongly recommended,,1,2
+CHEM 311,CHEM,Chemistry,311,300,undergraduate,Instrumental Analytical Chemistry,3,CHEM 211,,,"One of BIOL 202, STAT 230 strongly recommended",,1,1
+CHEM 312,CHEM,Chemistry,312,300,undergraduate,Introduction to Quantum Mechanics and Spectroscopy,3,CHEM 201,,,MATH 200 corequisite strongly recommended,,1,1
+CHEM 317,CHEM,Chemistry,317,300,undergraduate,Environmental Physical Organic Chemistry,3,"MATH 101,MATH 103;CHEM 204,CHEM 214;PHYS 121,PHYS 122",,,,,1,6
+CHEM 319,CHEM,Chemistry,319,300,undergraduate,Building Scientific Instrumentation,3,"CHEM 113,CHEM 123;PHYS 121,PHYS 122",,Third-year standing,,CHEM 519,1,4
+CHEM 322,CHEM,Chemistry,322,300,undergraduate,Methods in Forensic Chemical Analysis,3,"CHEM 211,CHEM 123;BIOL 202,PSYO 271,STAT 230",,,,,1,5
+CHEM 330,CHEM,Chemistry,330,300,undergraduate,Advanced Organic Chemistry,3,"CHEM 204,CHEM 214",,,,,1,2
+CHEM 333,CHEM,Chemistry,333,300,undergraduate,Spectroscopic Techniques in Organic Chemistry,3,"CHEM 204,CHEM 214",,,,,1,2
+CHEM 334,CHEM,Chemistry,334,300,undergraduate,Green Organic Chemistry,3,CHEM 204,,,,,1,1
+CHEM 335,CHEM,Chemistry,335,300,undergraduate,Bioinorganic Chemistry,3,"CHEM 204,CHEM 214;CHEM 201,CHEM 210",,,,,1,4
+CHEM 336,CHEM,Chemistry,336,300,undergraduate,Green Inorganic Chemistry,3,"CHEM 220;CHEM 204,CHEM 214",,,,,1,3
+CHEM 337,CHEM,Chemistry,337,300,undergraduate,Coordination Chemistry,3,"CHEM 220;CHEM 204,CHEM 214",,,,,1,3
+CHEM 338,CHEM,Chemistry,338,300,undergraduate,Organometallic Chemistry,3,"CHEM 220;CHEM 204,CHEM 214",,,,,1,3
+CHEM 347,CHEM,Chemistry,347,300,undergraduate,Directed Studies in Chemistry,3-6,,,"Third-year standing, min 72% cumulative average, and permission of department head",,,0,0
+CHEM 403,CHEM,Chemistry,403,400,undergraduate,Enzymology,3,"BIOC 304,BIOL 311",,,,"BIOC 403,CHEM 569",1,2
+CHEM 412,CHEM,Chemistry,412,400,undergraduate,Methods in Metabolomics,3,CHEM 211,,Fourth-year standing in Chemistry or Environmental Chemistry,,"BIOC 412,CHEM 533",1,1
+CHEM 422,CHEM,Chemistry,422,400,undergraduate,"Special Topics in Chemistry, Lecture Format",3-12,,,Prerequisite determined by topic; third-year standing in Science; permission of department head,,"CHEM 507,CHEM 508",0,0
+CHEM 424,CHEM,Chemistry,424,400,undergraduate,Organometallic Catalysts,3,CHEM 338,,,,CHEM 524,1,1
+CHEM 426,CHEM,Chemistry,426,400,undergraduate,Advanced Inorganic Synthesis,3,CHEM 338,,,,CHEM 525,1,1
+CHEM 429,CHEM,Chemistry,429,400,undergraduate,Main Group Chemistry,3,"CHEM 220;CHEM 204,CHEM 214",,,,CHEM 529,1,3
+CHEM 434,CHEM,Chemistry,434,400,undergraduate,Chromatography and Mass Spectrometry,3,CHEM 311,,,,CHEM 534,1,1
+CHEM 447,CHEM,Chemistry,447,400,undergraduate,Directed Studies in Chemistry Literature and Data Analysis,3,,,"Fourth-year standing, min 72% cumulative average, and permission of department head",,,0,0
+CHEM 448,CHEM,Chemistry,448,400,undergraduate,"Directed Studies in Chemistry, Independent Study Format",3-6,,,"Fourth-year standing, min 72% cumulative average, and permission of department head",,,0,0
+CHEM 449,CHEM,Chemistry,449,400,undergraduate,Honours Thesis,6,,,"Fourth-year standing in Chemistry or Environmental Chemistry Major, min 76% cumulative average, permission of department head",,"CHEM 450,CHEM 451",0,0
+CHEM 450,CHEM,Chemistry,450,400,undergraduate,Honours Thesis Part I,3,,,Permission of department head; restricted to Chemistry or Environmental Chemistry Honours,,CHEM 449,0,0
+CHEM 451,CHEM,Chemistry,451,400,undergraduate,Honours Thesis Part II,3,CHEM 450,,,,CHEM 449,1,1
+CHEM 461,CHEM,Chemistry,461,400,undergraduate,Advanced Analytical Chemistry Laboratory,3,CHEM 311,,,,,1,1
+CHEM 462,CHEM,Chemistry,462,400,undergraduate,Advanced Inorganic Chemistry Laboratory,3,"CHEM 335,CHEM 336,CHEM 337,CHEM 338",,"TWO of CHEM 335, 336, 337, 338 required",,,1,4
+CHEM 463,CHEM,Chemistry,463,400,undergraduate,Advanced Organic Chemistry Laboratory,3,"CHEM 330;CHEM 317,CHEM 333",,,,,1,3
+CHEM 464,CHEM,Chemistry,464,400,undergraduate,Advanced Physical and Biophysical Chemistry Laboratory,3,"CHEM 304,CHEM 305,CHEM 312",,"TWO of CHEM 304, 305, 312 required",,,1,3
+CHEM 465,CHEM,Chemistry,465,400,undergraduate,Advanced Chemistry Laboratory in Special Topics,3,,,Prerequisite determined by topic offered,,,0,0
+CHEM 474,CHEM,Chemistry,474,400,undergraduate,Solar Energy,3,CHEM 201,,,CHEM 304 recommended,CHEM 574,1,1
+CHEM 477,CHEM,Chemistry,477,400,undergraduate,Molecular and Cellular Biophysics,3,,,,,"BIOC 477,CHEM 577",0,0
+CHEM 481,CHEM,Chemistry,481,400,undergraduate,Organic Synthesis,3,CHEM 330,,,,CHEM 581,1,1
+CHEM 482,CHEM,Chemistry,482,400,undergraduate,"Advanced Organic Chemistry: Reactions, Mechanisms, and Synthesis",3,CHEM 203;CHEM 204;CHEM 330;CHEM 333,,,,CHEM 582,1,4
+CHEM 484,CHEM,Chemistry,484,400,undergraduate,Chemical Biology,3,,,Third-year standing in the B.Sc.,,CHEM 584,0,0
+CHEM 485,CHEM,Chemistry,485,400,undergraduate,Natural Product Biosynthesis and Synthetic Biology,3,"CHEM 204,CHEM 214;BIOC 310;BIOL 319;BIOC 305",,,,"BIOC 406,CHEM 585",1,5
+CHEM 507,CHEM,Chemistry,507,500,graduate,"Topics in Physical Chemistry, Laboratory and Lecture Format",3-9,,,,,"CHEM 508,CHEM 422",0,0
+CHEM 508,CHEM,Chemistry,508,500,graduate,"Topics in Physical Chemistry, Lecture Format",3-9,,,,,"CHEM 507,CHEM 422",0,0
+CHEM 519,CHEM,Chemistry,519,500,graduate,Building Scientific Instrumentation,3,,,,,CHEM 319,0,0
+CHEM 521,CHEM,Chemistry,521,500,graduate,"Topics in Inorganic Chemistry, Laboratory and Lecture Format",3-9,,,,,"CHEM 522,CHEM 422",0,0
+CHEM 522,CHEM,Chemistry,522,500,graduate,"Topics in Inorganic Chemistry, Lecture Format",3-9,,,,,"CHEM 521,CHEM 422",0,0
+CHEM 524,CHEM,Chemistry,524,500,graduate,Organometallic Catalysts,3,,,,,CHEM 424,0,0
+CHEM 525,CHEM,Chemistry,525,500,graduate,Advanced Inorganic Synthesis,3,,,,,CHEM 426,0,0
+CHEM 529,CHEM,Chemistry,529,500,graduate,Main Group Chemistry,3,,,,,CHEM 429,0,0
+CHEM 533,CHEM,Chemistry,533,500,graduate,Metabolomics,3,,,,,"CHEM 412,BIOC 412",0,0
+CHEM 534,CHEM,Chemistry,534,500,graduate,Chromatography and Mass Spectrometry,3,,,,,CHEM 434,0,0
+CHEM 535,CHEM,Chemistry,535,500,graduate,"Topics in Analytical Chemistry, Independent Study Format",3-9,,,,,"CHEM 536,CHEM 537",0,0
+CHEM 536,CHEM,Chemistry,536,500,graduate,"Topics in Analytical Chemistry, Lecture and Laboratory Format",3-9,,,,,"CHEM 535,CHEM 537",0,0
+CHEM 537,CHEM,Chemistry,537,500,graduate,"Topics in Analytical Chemistry, Lecture Format",3-9,,,,,"CHEM 535,CHEM 536",0,0
+CHEM 540,CHEM,Chemistry,540,500,graduate,Graduate Seminar in Chemistry,1,,,,,,0,0
+CHEM 549,CHEM,Chemistry,549,500,graduate,M.Sc. Thesis,23,,,,,,0,0
+CHEM 567,CHEM,Chemistry,567,500,graduate,"Topics in Organic Chemistry, Laboratory and Lecture Format",3-9,,,,,"CHEM 568,CHEM 422",0,0
+CHEM 568,CHEM,Chemistry,568,500,graduate,"Topics in Organic Chemistry, Lecture Format",3-9,,,,,"CHEM 567,CHEM 422",0,0
+CHEM 569,CHEM,Chemistry,569,500,graduate,Advanced Mechanistic Enzymology,3,,,,,"CHEM 403,BIOC 403",0,0
+CHEM 574,CHEM,Chemistry,574,500,graduate,Solar Energy,3,,,,,CHEM 474,0,0
+CHEM 577,CHEM,Chemistry,577,500,graduate,Molecular and Cellular Biophysics,3,,,,,"CHEM 477,BIOC 477",0,0
+CHEM 581,CHEM,Chemistry,581,500,graduate,Organic Synthesis,3,,,,,CHEM 481,0,0
+CHEM 582,CHEM,Chemistry,582,500,graduate,"Advanced Organic Chemistry: Reactions, Mechanisms, and Synthesis",3,,,Must be enrolled in a graduate program in Chemistry or Biochemistry & Molecular Biology,,CHEM 482,0,0
+CHEM 584,CHEM,Chemistry,584,500,graduate,Chemical Biology,3,,,,,CHEM 484,0,0
+CHEM 585,CHEM,Chemistry,585,500,graduate,Natural Product Biosynthesis and Synthetic Biology,3,,,,,"BIOC 406,CHEM 485",0,0
+CHEM 591,CHEM,Chemistry,591,500,graduate,Biocatalysis,3,,,,,BIOC 425,0,0
+CHEM 592,CHEM,Chemistry,592,500,graduate,Nucleic Acids - Structure and Function,3,,,,,BIOC 410,0,0
+CHEM 649,CHEM,Chemistry,649,600,graduate,Ph.D. Thesis,0,,,,,,0,0
+COOP 401,COOP,Co-operative Education,401,400,undergraduate,Co-op Education Work Experience I,3,,,Restricted to students who completed all third-year requirements and secured a work term; Pass/Fail,,,0,0
+COOP 402,COOP,Co-operative Education,402,400,undergraduate,Co-op Education Work Experience II,3,COOP 401,,Restricted to students who completed all third-year requirements and secured a work term; Pass/Fail,,,1,1
+COOP 403,COOP,Co-operative Education,403,400,undergraduate,Co-op Education Work Experience III,3,COOP 402,,Restricted to students who completed all third-year requirements and secured a work term; Pass/Fail,,,1,1
+COOP 404,COOP,Co-operative Education,404,400,undergraduate,Co-op Education Work Experience IV,3,COOP 403,,Restricted to students who completed all third-year requirements and secured a work term; Pass/Fail,,,1,1
+COOP 405,COOP,Co-operative Education,405,400,undergraduate,Co-op Education Work Experience V,3,COOP 404,,Restricted to students who completed all third-year requirements and secured a work term; Pass/Fail,,,1,1
+COOP 406,COOP,Co-operative Education,406,400,undergraduate,Co-op Education Work Experience VI,3,COOP 405,,Restricted to students who completed all third-year requirements and secured a work term; Pass/Fail,,,1,1
+COSC 101,COSC,Computer Science,101,100,undergraduate,Digital Citizenship,3,,,,,,0,0
+COSC 111,COSC,Computer Science,111,100,undergraduate,Computer Programming I,3,"MATH 125,MATH 126,MATH 100,MATH 101,MATH 103,MATH 116",,"Score of 70% or higher in one of PREC 12, MATH 12 (high school), MATH 125, MATH 126; or one of MATH 100/101/103/116",,,1,6
+COSC 114,COSC,Computer Science,114,100,undergraduate,Vector Graphics and Animations,3,,,"High school: one of MATH 12, PREC 12, CALC 12",,,0,0
+COSC 121,COSC,Computer Science,121,100,undergraduate,Computer Programming II,3,"COSC 111,COSC 123,APSC 177",,Score of 60% or higher required,,,1,3
+COSC 122,COSC,Computer Science,122,100,undergraduate,AI and Computer Fluency,3,,,,,,0,0
+COSC 123,COSC,Computer Science,123,100,undergraduate,Computer Creativity,3,"COSC 111,COSC 122",,,,,1,2
+COSC 150,COSC,Computer Science,150,100,undergraduate,Physical Computing,3,,"COSC 111,COSC 122,APSC 177",,,,0,0
+COSC 210,COSC,Computer Science,210,200,undergraduate,Software Construction,4,COSC 121,COSC 222,,,,1,1
+COSC 211,COSC,Computer Science,211,200,undergraduate,Machine Architecture,3,COSC 121,,,,,1,1
+COSC 221,COSC,Computer Science,221,200,undergraduate,Discrete Structures in Computing,3,"MATH 101,MATH 103,MATH 142,APSC 173",COSC 121,,,,1,4
+COSC 222,COSC,Computer Science,222,200,undergraduate,Data Structures,3,COSC 121,,Score of 60% or higher in COSC 121,,,1,1
+COSC 223,COSC,Computer Science,223,200,undergraduate,"Principle of Computing: Logic, Discrete Structure, and Data Structure",3,"COSC 114,APSC 171;COSC 123,COSC 111",,,,,1,4
+COSC 247,COSC,Computer Science,247,200,undergraduate,Networks and Social Media,3,COSC 223,,,,,1,1
+COSC 264,COSC,Computer Science,264,200,undergraduate,Introduction to Web Development and Databases,3,"COSC 121,COSC 223",,,,,1,2
+COSC 270,COSC,Computer Science,270,200,undergraduate,Fundamentals of Privacy and Security,3,COSC 111,,,,,1,1
+COSC 301,COSC,Computer Science,301,300,undergraduate,Introduction to Data Analytics,3,,COSC 304,Third-year standing,,"DATA 301,DATA 501",0,0
+COSC 303,COSC,Computer Science,303,300,undergraduate,Numerical Analysis,3,"MATH 200;MATH 221;COSC 111,DATA 301",,,,MATH 303,1,4
+COSC 304,COSC,Computer Science,304,300,undergraduate,Introduction to Databases,3,"COSC 222,COSC 111,COSC 121,COSC 123",,"Either COSC 222, or third-year standing plus one of COSC 111/121/123",COSC 121 recommended,,1,4
+COSC 305,COSC,Computer Science,305,300,undergraduate,Project Management,3,,COSC 310,,,,0,0
+COSC 310,COSC,Computer Science,310,300,undergraduate,Software Engineering,3,"COSC 210,COSC 222,COSC 223",,"Either (a) COSC 210 and one of COSC 222/223, or (b) third-year standing and one of COSC 210/222/223",,,1,3
+COSC 315,COSC,Computer Science,315,300,undergraduate,Introduction to Operating Systems,3,COSC 221;COSC 222,,,,,1,2
+COSC 320,COSC,Computer Science,320,300,undergraduate,Analysis of Algorithms,3,"COSC 221;COSC 222;MATH 221,APSC 179",,,,,1,4
+COSC 322,COSC,Computer Science,322,300,undergraduate,Introduction to Artificial Intelligence,3,COSC 221;COSC 222,,,,COSC 522,1,2
+COSC 328,COSC,Computer Science,328,300,undergraduate,Introduction to Networks,3,COSC 211;COSC 222,,,,,1,2
+COSC 329,COSC,Computer Science,329,300,undergraduate,Learning Analytics,3,"COSC 222;STAT 121,STAT 124,STAT 205,STAT 230",,,,"COSC 419,COSC 436,COSC 437,COSC 519,COSC 536,COSC 537",1,5
+COSC 335,COSC,Computer Science,335,300,undergraduate,Introduction to Medical Imaging and Imaging Informatics,3,"COSC 222;PHYS 121,PHYS 122",,Score above 60% in COSC 222 and in one of PHYS 121/122,PHYS 121 preferred,PHYS 336,1,3
+COSC 341,COSC,Computer Science,341,300,undergraduate,Human Computer Interaction,3,"COSC 111,COSC 121,COSC 123,DATA 301",,Third-year standing,,,1,4
+COSC 344,COSC,Computer Science,344,300,undergraduate,Image Processing and Applications,3,"COSC 210,COSC 222;MATH 200,APSC 248;MATH 221,APSC 179",,,,COSC 445,1,6
+COSC 360,COSC,Computer Science,360,300,undergraduate,Web Programming,3,COSC 121;COSC 304,,Third-year standing,,,1,2
+COSC 404,COSC,Computer Science,404,400,undergraduate,Database System Implementation,3,COSC 304,,Third-year standing,,COSC 504,1,1
+COSC 405,COSC,Computer Science,405,400,undergraduate,Modelling and Simulation,3,COSC 221;COSC 222,,,,"DATA 405,COSC 505,DATA 505",1,2
+COSC 406,COSC,Computer Science,406,400,undergraduate,Numerical Optimization,3,"MATH 200,APSC 248;MATH 221,APSC 179",,,,COSC 506,1,4
+COSC 407,COSC,Computer Science,407,400,undergraduate,Introduction to Parallel Computing,3,"COSC 222,COSC 210",,,,COSC 507,1,2
+COSC 412,COSC,Computer Science,412,400,undergraduate,Mining Software Repositories,3,COSC 310;DATA 311,,,,COSC 512,1,2
+COSC 413,COSC,Computer Science,413,400,undergraduate,AI for Software Engineering,3,COSC 310,,Either fourth-year standing or COSC 310,,COSC 513,1,1
+COSC 414,COSC,Computer Science,414,400,undergraduate,Computer Graphics,3,"COSC 221;COSC 222;MATH 221,APSC 179",,,,,1,4
+COSC 416,COSC,Computer Science,416,400,undergraduate,Special Topics in Databases,3-9,COSC 304,,Third-year standing,,"COSC 431,COSC 432,COSC 516,COSC 531,COSC 532",1,1
+COSC 417,COSC,Computer Science,417,400,undergraduate,Topics in Computer Networks,3-6,COSC 315;COSC 328,,,,"COSC 433,COSC 434",1,2
+COSC 419,COSC,Computer Science,419,400,undergraduate,Topics in Computer Science,3-9,,,Fourth-year standing,,"COSC 436,COSC 437,COSC 519,COSC 536,COSC 537",0,0
+COSC 421,COSC,Computer Science,421,400,undergraduate,Network Science,3,"COSC 221;COSC 222;STAT 230,STAT 205",,,,"COSC 521,DATA 421,DATA 521",1,4
+COSC 431,COSC,Computer Science,431,400,undergraduate,"Special Topics in Databases, Lecture Format",3-9,COSC 304,,Third-year standing,,"COSC 416,COSC 432,COSC 516,COSC 531,COSC 532",1,1
+COSC 432,COSC,Computer Science,432,400,undergraduate,"Special Topics in Databases, Lecture and Laboratory Format",3-9,COSC 304,,Third-year standing,,"COSC 416,COSC 431,COSC 516,COSC 531,COSC 532",1,1
+COSC 433,COSC,Computer Science,433,400,undergraduate,"Topics in Computer Networks, Lecture Format",3-6,COSC 315;COSC 328,,,,"COSC 417,COSC 434",1,2
+COSC 434,COSC,Computer Science,434,400,undergraduate,"Topics in Computer Networks, Lecture and Laboratory Format",3-6,COSC 315;COSC 328,,,,"COSC 417,COSC 433",1,2
+COSC 436,COSC,Computer Science,436,400,undergraduate,"Topics in Computer Science, Lecture Format",3-9,,,Fourth-year standing,,"COSC 419,COSC 437,COSC 519,COSC 536,COSC 537",0,0
+COSC 437,COSC,Computer Science,437,400,undergraduate,"Topics in Computer Science, Lecture and Laboratory Format",3-9,,,Fourth-year standing,,"COSC 419,COSC 436,COSC 519,COSC 536,COSC 537",0,0
+COSC 441,COSC,Computer Science,441,400,undergraduate,Advanced Human Computer Interaction,3,COSC 341,,Fourth-year standing,,COSC 541,1,1
+COSC 442,COSC,Computer Science,442,400,undergraduate,Educational Game Development,3,COSC 341;COSC 310,,,,COSC 542,1,2
+COSC 444,COSC,Computer Science,444,400,undergraduate,Computer Vision,3,COSC 344,,,,"COSC 544,COSC 545",1,1
+COSC 447,COSC,Computer Science,447,400,undergraduate,Directed Studies in Software Maintenance,3,,,Third-year standing and permission of department head,,,0,0
+COSC 448,COSC,Computer Science,448,400,undergraduate,Directed Studies in Computer Science,3-6,,,Third-year standing and permission of department head,,,0,0
+COSC 449,COSC,Computer Science,449,400,undergraduate,Honours Thesis,6,,,Fourth-year standing; admission to B.A. or B.Sc. Computer Science Honours; permission of department head,,"COSC 450,COSC 451",0,0
+COSC 450,COSC,Computer Science,450,400,undergraduate,Honours Thesis Part I,3,,,Permission of department head; restricted to B.A./B.Sc. Computer Science Honours,,COSC 449,0,0
+COSC 451,COSC,Computer Science,451,400,undergraduate,Honours Thesis Part II,3,COSC 450,,,,COSC 449,1,1
+COSC 490,COSC,Computer Science,490,400,undergraduate,Student-Directed Seminar,3,,,Third-year standing and permission of department head,,,0,0
+COSC 499,COSC,Computer Science,499,400,undergraduate,Capstone Software Engineering Project,6,COSC 304;COSC 310;COSC 341,,,,,1,3
+COSC 504,COSC,Computer Science,504,500,graduate,Database System Implementation,3,,,,,COSC 404,0,0
+COSC 505,COSC,Computer Science,505,500,graduate,Modelling and Simulation,3,,,,,"COSC 405,DATA 405,DATA 505",0,0
+COSC 506,COSC,Computer Science,506,500,graduate,Numerical Optimization,3,,,,,COSC 406,0,0
+COSC 507,COSC,Computer Science,507,500,graduate,Parallel Computing,3,,,,,COSC 407,0,0
+COSC 512,COSC,Computer Science,512,500,graduate,Mining Software Repositories,3,,,,,COSC 412,0,0
+COSC 513,COSC,Computer Science,513,500,graduate,AI for Software Engineering,3,,,,,COSC 413,0,0
+COSC 516,COSC,Computer Science,516,500,graduate,Special Topics in Databases,3-6,,,,,"COSC 416,COSC 431,COSC 432,COSC 531,COSC 532",0,0
+COSC 519,COSC,Computer Science,519,500,graduate,Topics in Computer Science,3-9,,,,,COSC 419,0,0
+COSC 520,COSC,Computer Science,520,500,graduate,Advanced Algorithms,3,,,,,COSC 320,0,0
+COSC 521,COSC,Computer Science,521,500,graduate,Network Science,3,,,,,"COSC 421,DATA 421,DATA 521",0,0
+COSC 522,COSC,Computer Science,522,500,graduate,Advanced Topics in Artificial Intelligence,3,,,,,COSC 322,0,0
+COSC 531,COSC,Computer Science,531,500,graduate,"Special Topics in Databases, Lecture Format",3-6,,,,,"COSC 416,COSC 431,COSC 432,COSC 516,COSC 532",0,0
+COSC 532,COSC,Computer Science,532,500,graduate,"Special Topics in Databases, Lecture and Laboratory Format",3-6,,,,,"COSC 416,COSC 431,COSC 432,COSC 516,COSC 531",0,0
+COSC 536,COSC,Computer Science,536,500,graduate,"Topics in Computer Science, Lecture Format",3-6,,,,,"COSC 419,COSC 436,COSC 437,COSC 519,COSC 537",0,0
+COSC 537,COSC,Computer Science,537,500,graduate,"Topics in Computer Science, Lecture and Laboratory Format",3-6,,,,,"COSC 419,COSC 436,COSC 437,COSC 519,COSC 536",0,0
+COSC 541,COSC,Computer Science,541,500,graduate,Advanced Human Computer Interaction,3,,,,,COSC 441,0,0
+COSC 544,COSC,Computer Science,544,500,graduate,Computer Vision,3,,,,,"COSC 444,COSC 545",0,0
+COSC 548,COSC,Computer Science,548,500,graduate,Directed Studies,3-6,,,,,,0,0
+COSC 549,COSC,Computer Science,549,500,graduate,Master's Thesis,12,,,Pass/Fail,,,0,0
+COSC 550,COSC,Computer Science,550,500,graduate,Master's Project,6,,,Pass/Fail,,,0,0
+COSC 590,COSC,Computer Science,590,500,graduate,Graduate Seminar,1-3,,,Pass/Fail,,,0,0
+COSC 649,COSC,Computer Science,649,600,graduate,Doctoral Dissertation,0,,,Pass/Fail,,,0,0
+COSC 690,COSC,Computer Science,690,600,graduate,Research Skills,3,,,Pass/Fail,,,0,0
+DATA 101,DATA,Data Science,101,100,undergraduate,Making Predictions with Data,3,,,,,,0,0
+DATA 301,DATA,Data Science,301,300,undergraduate,Introduction to Data Analytics,3,,,"Third-year standing; cannot be used for credits toward a major in Computer Science, Data Science, Mathematics, or Statistics",,"COSC 301,DATA 501",0,0
+DATA 310,DATA,Data Science,310,300,undergraduate,Applied Regression Analysis,3,"MATH 221;STAT 205,STAT 230",,,,,1,3
+DATA 311,DATA,Data Science,311,300,undergraduate,Machine Learning,3,"STAT 205,STAT 230,APSC 254,BIOL 202,PSYO 373;COSC 111,APSC 177",,"Either (a) STAT 205/230, or (b) score above 75% in APSC 254/BIOL 202/PSYO 373; and COSC 111 or APSC 177",,,1,7
+DATA 315,DATA,Data Science,315,300,undergraduate,Applied Time Series and Forecasting,3,"STAT 205,STAT 230",,,,,1,2
+DATA 405,DATA,Data Science,405,400,undergraduate,Stochastic Modelling and Simulation,3,"STAT 205,STAT 230",,60% or above in STAT 205/230,,"COSC 405,COSC 505,DATA 505",1,2
+DATA 407,DATA,Data Science,407,400,undergraduate,Sampling and Design,3,"STAT 205,STAT 230,PSYO 372,BIOL 202",,,,STAT 507,1,4
+DATA 410,DATA,Data Science,410,400,undergraduate,Regression and Generalized Linear Models,3,DATA 310,,,,STAT 538,1,1
+DATA 419,DATA,Data Science,419,400,undergraduate,Topics in Data Science,3-9,,,Fourth-year standing,,,0,0
+DATA 448,DATA,Data Science,448,400,undergraduate,Directed Studies in Data Science,3-6,,,"Third-year standing in Data Science major or Honours, and permission of department head",,,0,0
+DATA 449,DATA,Data Science,449,400,undergraduate,Honours Thesis,6,,,Fourth-year standing and permission of department head; restricted to B.Sc. Data Science Honours,,"DATA 450,DATA 451",0,0
+DATA 450,DATA,Data Science,450,400,undergraduate,Honours Thesis Part I,3,,,Fourth-year standing and permission of department head; restricted to Data Science Honours,,DATA 449,0,0
+DATA 451,DATA,Data Science,451,400,undergraduate,Honours Thesis Part II,3,DATA 450,,,,DATA 449,1,1
+DATA 500,DATA,Data Science,500,500,graduate,Communication and Consulting in Data Science,3,,,,,STAT 400,0,0
+DATA 501,DATA,Data Science,501,500,graduate,Data Analytics,3,,,,,"COSC 301,DATA 301",0,0
+DATA 505,DATA,Data Science,505,500,graduate,Modelling and Simulation,3,,,,,"COSC 405,DATA 405,COSC 505",0,0
+DATA 530,DATA,Data Science,530,500,graduate,Computing Platforms for Data Science,1,,,Restricted to students in the MDS program,,,0,0
+DATA 531,DATA,Data Science,531,500,graduate,Programming for Data Science,1,,,Restricted to students in the MDS program,,,0,0
+DATA 532,DATA,Data Science,532,500,graduate,Algorithms and Data Structure,1,,,Restricted to students in the MDS program,,,0,0
+DATA 533,DATA,Data Science,533,500,graduate,Collaborative Software Development,1,,,Restricted to students in the MDS program,DATA 532 recommended,,0,0
+DATA 534,DATA,Data Science,534,500,graduate,Web and Cloud Computing,1,,,Restricted to students in the MDS program,,,0,0
+DATA 540,DATA,Data Science,540,500,graduate,Databases and Data Retrieval,1,,,Restricted to students in the MDS program,DATA 531 recommended,,0,0
+DATA 541,DATA,Data Science,541,500,graduate,Scripting and Reporting,1,,,Restricted to students in the MDS program,,,0,0
+DATA 542,DATA,Data Science,542,500,graduate,Data Wrangling,1,,,Restricted to students in the MDS program,"DATA 532, DATA 540, DATA 541 recommended",,0,0
+DATA 543,DATA,Data Science,543,500,graduate,Data Collection,1,,,Restricted to students in the MDS program,"DATA 540, DATA 570 recommended",,0,0
+DATA 550,DATA,Data Science,550,500,graduate,Dataviz I,1,,,Restricted to students in the MDS program,"DATA 530, DATA 531 recommended",,0,0
+DATA 551,DATA,Data Science,551,500,graduate,Dataviz II,1,,,Restricted to students in the MDS program,"DATA 534, DATA 543, DATA 550 recommended",,0,0
+DATA 552,DATA,Data Science,552,500,graduate,Communication and Argumentation,1,,,Restricted to students in the MDS program,,,0,0
+DATA 553,DATA,Data Science,553,500,graduate,"Privacy, Security and Professional Ethics",1,,,Restricted to students in the MDS program,,,0,0
+DATA 570,DATA,Data Science,570,500,graduate,Predictive Modelling,1,,,Restricted to students in the MDS program,DATA 580 recommended,,0,0
+DATA 571,DATA,Data Science,571,500,graduate,Resampling and Regularization,1,,,Restricted to students in the MDS program,DATA 570 recommended,,0,0
+DATA 572,DATA,Data Science,572,500,graduate,Supervised Learning,1,,,Restricted to students in the MDS program,DATA 571 recommended,,0,0
+DATA 573,DATA,Data Science,573,500,graduate,Unsupervised and Semi-supervised Learning,1,,,Restricted to students in the MDS program,DATA 571 recommended,,0,0
+DATA 580,DATA,Data Science,580,500,graduate,Modelling and Simulation I,1,,,Restricted to students in the MDS program,,,0,0
+DATA 581,DATA,Data Science,581,500,graduate,Modelling and Simulation II,1,,,Restricted to students in the MDS program,DATA 580 recommended,,0,0
+DATA 582,DATA,Data Science,582,500,graduate,Bayesian Inference,1,,,Restricted to students in the MDS program,"DATA 572, DATA 581 recommended",,0,0
+DATA 583,DATA,Data Science,583,500,graduate,Advanced Predictive Modelling,1,,,Restricted to students in the MDS program,"DATA 572, DATA 581 recommended",,0,0
+DATA 585,DATA,Data Science,585,500,graduate,Optimization,1,,,Restricted to students in the MDS program,DATA 580 recommended,,0,0
+DATA 586,DATA,Data Science,586,500,graduate,Advanced Machine Learning,1,,,Restricted to students in the MDS program,DATA 580 recommended,,0,0
+DATA 589,DATA,Data Science,589,500,graduate,Special Topic,1,,,Restricted to students in the MDS program,DATA 543 recommended,,0,0
+DATA 599,DATA,Data Science,599,500,graduate,Capstone,6,,,Restricted to students in the MDS program,"DATA 583, DATA 586 recommended",,0,0
+EESC 101,EESC,Earth & Environmental Sciences,101,100,undergraduate,Environmental Science,3,,,,,,0,0
+EESC 104,EESC,Earth & Environmental Sciences,104,100,undergraduate,Four Billion Years and Counting,3,,,,,,0,0
+EESC 106,EESC,Earth & Environmental Sciences,106,100,undergraduate,The Catastrophic Earth,3,,,,,,0,0
+EESC 111,EESC,Earth & Environmental Sciences,111,100,undergraduate,Earth Science,3,,,,,,0,0
+EESC 112,EESC,Earth & Environmental Sciences,112,100,undergraduate,Environmental Earth Science,3,"EESC 111;CHEM 111,CHEM 121",,,,,1,3
+EESC 121,EESC,Earth & Environmental Sciences,121,100,undergraduate,Earth History,3,,,,EESC 111 recommended,,0,0
+EESC 200,EESC,Earth & Environmental Sciences,200,200,undergraduate,Mineralogy,3,"EESC 111;CHEM 111,CHEM 121",,,,,1,3
+EESC 201,EESC,Earth & Environmental Sciences,201,200,undergraduate,Introduction to Petrology,3,EESC 200,,,,,1,1
+EESC 203,EESC,Earth & Environmental Sciences,203,200,undergraduate,Structural Geology,3,EESC 111,,,,EESC 325,1,1
+EESC 204,EESC,Earth & Environmental Sciences,204,200,undergraduate,Geochemistry,3,"CHEM 123;EESC 111,EESC 112",,,,,1,3
+EESC 205,EESC,Earth & Environmental Sciences,205,200,undergraduate,Introduction to Hydrology,3,"EESC 101,EESC 111,EESC 112,EESC 121,GEOG 108+GEOG 109",,"Either (a) TWO of EESC 101/111/112/121, or (b) GEOG 108 and GEOG 109, or (c) second-year standing in the Bachelor of Science",,GEOG 205,1,6
+EESC 206,EESC,Earth & Environmental Sciences,206,200,undergraduate,Soil Science,3,"EESC 111,EESC 112,GEOG 109,CHEM 121,PHYS 111,PHYS 112",,TWO of the listed courses required,,"EESC 456,GEOG 466",1,6
+EESC 212,EESC,Earth & Environmental Sciences,212,200,undergraduate,Atmospheric Environments,3,"GEOG 108+GEOG 109,EESC 101,EESC 111,EESC 112,EESC 121",,Either (a) GEOG 108 and GEOG 109; or (b) TWO of EESC 101/111/112/121; or (c) second-year standing in the Bachelor of Science,,GEOG 200,1,6
+EESC 222,EESC,Earth & Environmental Sciences,222,200,undergraduate,Geomorphology,3,"GEOG 108+GEOG 109,MATH 100+EESC 111,MATH 100+EESC 112",,Or second-year standing in the Bachelor of Science,,GEOG 222,1,6
+EESC 301,EESC,Earth & Environmental Sciences,301,300,undergraduate,Limnology,3,"EESC 222,EESC 204,CHEM 211,BIOL 116+BIOL 125,CHEM 113+BIOL 116,CHEM 113+BIOL 125,CHEM 123+BIOL 116,CHEM 123+BIOL 125,ENGR 341,ENGR 342",,Third-year standing; option (a) requires TWO of EESC 222/EESC 204/CHEM 211,,,1,15
+EESC 304,EESC,Earth & Environmental Sciences,304,300,undergraduate,Anthropogenic Climate Change,3,"GEOG 108,GEOG 200,EESC 212",,Third-year standing,,GEOG 304,1,3
+EESC 309,EESC,Earth & Environmental Sciences,309,300,undergraduate,Global Biogeochemistry,3,"CHEM 113,CHEM 123;EESC 101,EESC 111,EESC 112,EESC 121,GEOG 108+GEOG 109,BIOL 201,BIOL 203,CHEM 301,CHEM 302",,"Second requirement: (a) TWO of EESC 101/111/112/121, or (b) GEOG 108 and 109, or (c) one of BIOL 201/203, or (d) one of CHEM 301/302",,,1,12
+EESC 312,EESC,Earth & Environmental Sciences,312,300,undergraduate,Forest Science and Management,3,"BIOL 125,EESC 101,EESC 111,EESC 112,GEOG 108,GEOG 109,SUST 100,BIOL 201,BIOL 210,GEOG 207",,"Either (a)/(b) TWO of the introductory courses listed (BIOL 125, EESC 101/111/112, GEOG 108/109, SUST 100), or (c) one of BIOL 201/BIOL 210/GEOG 207",,EESC 213,1,10
+EESC 313,EESC,Earth & Environmental Sciences,313,300,undergraduate,Management of Forested Watersheds,3,"EESC 205,ENGR 341,ENGR 342",,,,,1,3
+EESC 314,EESC,Earth & Environmental Sciences,314,300,undergraduate,"Environmental Impact Assessment: Process, Regulation and Administration",3,,,"6 credits of EESC, GEOG, BIOL, SUST, CHEM, or APSC; third-year standing",,GEOG 314,0,0
+EESC 315,EESC,Earth & Environmental Sciences,315,300,undergraduate,Environmental Impact Assessment: Techniques and practice,3,,,"6 credits of EESC, GEOG, BIOL, SUST, CHEM, or APSC; third-year standing",EESC 314 / GEOG 314 recommended,,0,0
+EESC 316,EESC,Earth & Environmental Sciences,316,300,undergraduate,Wildfire Science and Management,3,"BIOL 125,EESC 101,EESC 112,GEOG 108,GEOG 109,SUST 100,BIOL 201,BIOL 210,EESC 212,EESC 312,GEOG 200,GEOG 207",,"Either (a) TWO of BIOL 125/EESC 101/EESC 112/GEOG 108/GEOG 109/SUST 100, or (b) one of BIOL 201/BIOL 210/EESC 212/EESC 312/GEOG 200/GEOG 207",,,1,12
+EESC 322,EESC,Earth & Environmental Sciences,322,300,undergraduate,Advanced Petrology,3,EESC 201,,,,,1,1
+EESC 323,EESC,Earth & Environmental Sciences,323,300,undergraduate,Geochemistry,3,"EESC 111,EESC 200,GEOG 109,CHEM 201,CHEM 210;CHEM 113,CHEM 123",,,,,1,7
+EESC 335,EESC,Earth & Environmental Sciences,335,300,undergraduate,Field Techniques,3,EESC 111,,6 credits of 200-level or higher EESC or science-designated GEOG; third-year standing; permission of department head,,,1,1
+EESC 341,EESC,Earth & Environmental Sciences,341,300,undergraduate,Quaternary Paleoecology and Environmental Change,3,"EESC 111,EESC 121,GEOG 108;CHEM 111,CHEM 121",,Third-year standing,,GEOG 341,1,5
+EESC 342,EESC,Earth & Environmental Sciences,342,300,undergraduate,Hydrogeology,3,"MATH 100;PHYS 111,PHYS 112;EESC 111,EESC 121,GEOG 109,EESC 205,GEOG 205~ENGR 340,ENGR 341",,"Third-year standing; two alternative paths (a) MATH 100 + PHYS 111/112 + one of listed EESC/GEOG, or (b) ENGR 340/341",,,1,10
+EESC 350,EESC,Earth & Environmental Sciences,350,300,undergraduate,Geophysics,3,"MATH 100;EESC 111,EESC 121;PHYS 121,PHYS 122~ENGR 340",,Third-year standing; two alternative paths,,,1,6
+EESC 356,EESC,Earth & Environmental Sciences,356,300,undergraduate,Stratigraphy and Sedimentology,3,"EESC 121,EESC 222,GEOG 222",,,,GEOG 356,1,3
+EESC 360,EESC,Earth & Environmental Sciences,360,300,undergraduate,Geologic Resources,3,EESC 200;EESC 201,,,,,1,2
+EESC 367,EESC,Earth & Environmental Sciences,367,300,undergraduate,Energy Resources and Systems,3,"GEOG 108,GEOG 110,GEOG 129,EESC 101,EESC 111,EESC 112,SUST 100,CHEM 203,ENGR 347",,Third-year standing,,GEOG 367,1,9
+EESC 390,EESC,Earth & Environmental Sciences,390,300,undergraduate,Geological Field Mapping,3,EESC 200;EESC 203;EESC 356,,Permission of department head,,,1,3
+EESC 395,EESC,Earth & Environmental Sciences,395,300,undergraduate,"Special Topics in Earth and Environmental Sciences, Lecture Format",1-6,,,Third-year standing and permission of department head,,,0,0
+EESC 396,EESC,Earth & Environmental Sciences,396,300,undergraduate,"Special Topics in Earth and Environmental Sciences, Lecture and Laboratory Format",1-6,,,Third-year standing and permission of department head,,,0,0
+EESC 398,EESC,Earth & Environmental Sciences,398,300,undergraduate,Technical Communication,3,"APSC 176,APSC 201,CORH 203,ENGL 109,ENGL 112,ENGL 113,ENGL 150,ENGL 151,ENGL 153,ENGL 154,ENGL 155,ENGL 156",,3 credits from the listed courses,,,1,12
+EESC 402,EESC,Earth & Environmental Sciences,402,400,undergraduate,Freshwater Management,3,,,"3 credits of 200-level courses in APSC, BIOL, CHEM, EESC or GEOG cross-listed with EESC; third-year standing",,,0,0
+EESC 413,EESC,Earth & Environmental Sciences,413,400,undergraduate,Analytical Methods in Hydrology,3,"GEOG 271,ENGR 360,BIOL 202,STAT 121,STAT 230;EESC 205,GEOG 205,ENGR 341,ENGR 342",,Third-year standing,,,1,9
+EESC 422,EESC,Earth & Environmental Sciences,422,400,undergraduate,Fluvial Geomorphology,3,"EESC 222,GEOG 222,APSC 253",,,,GEOG 422,1,3
+EESC 423,EESC,Earth & Environmental Sciences,423,400,undergraduate,Tracers of Natural Processes,3,"EESC 204,EESC 309,EESC 323,EESC 111+CHEM 301",,Third-year standing,,,1,5
+EESC 425,EESC,Earth & Environmental Sciences,425,400,undergraduate,Tectonics and Orogenesis,3,"EESC 204,EESC 323;EESC 203,EESC 325",,,,,1,4
+EESC 431,EESC,Earth & Environmental Sciences,431,400,undergraduate,Quaternary Glacial Environments,3,"EESC 222,EESC 356,GEOG 222,GEOG 356",,,,,1,4
+EESC 435,EESC,Earth & Environmental Sciences,435,400,undergraduate,Fluvial Field Techniques,3,"EESC 205,EESC 222,EESC 305,EESC 422,EESC 434,GEOG 205,GEOG 222,GEOG 422,ENGR 341,ENGR 342",,Third-year standing; permission of department head,,,1,10
+EESC 447,EESC,Earth & Environmental Sciences,447,400,undergraduate,"Directed Studies in Earth and Environmental Sciences, Independent Study Format",3-6,,,Third-year standing; permission of department head and faculty supervisor,,,0,0
+EESC 449,EESC,Earth & Environmental Sciences,449,400,undergraduate,Honours Thesis,6,,,Admission to Earth and Environmental Sciences or Freshwater Sciences Honours,,"EESC 450,EESC 451",0,0
+EESC 450,EESC,Earth & Environmental Sciences,450,400,undergraduate,Honours Thesis Part I,3,,,Permission of department head; restricted to EESC or Freshwater Sciences Honours,,EESC 449,0,0
+EESC 451,EESC,Earth & Environmental Sciences,451,400,undergraduate,Honours Thesis Part II,3,EESC 450,,,,EESC 449,1,1
+EESC 495,EESC,Earth & Environmental Sciences,495,400,undergraduate,"Advanced Special Topics in Earth and Environmental Sciences, Lecture Format",1-6,,,Third-year standing and permission of department head,,,0,0
+EESC 496,EESC,Earth & Environmental Sciences,496,400,undergraduate,"Advanced Special Topics in Earth and Environmental Sciences, Lecture and Laboratory Format",1-6,,,Third-year standing and permission of department head,,,0,0
+EESC 502,EESC,Earth & Environmental Sciences,502,500,graduate,Environmetrics,3,,,,,,0,0
+EESC 512,EESC,Earth & Environmental Sciences,512,500,graduate,"Applied Data Analysis in Geosciences, Lecture Format",3,,,,,,0,0
+EESC 513,EESC,Earth & Environmental Sciences,513,500,graduate,"Applied Data Analysis in Geosciences, Lecture and Lab Format",3,,,,,,0,0
+EESC 514,EESC,Earth & Environmental Sciences,514,500,graduate,"Applied Data Analysis in Geosciences, Independent Study Format",3,,,,,,0,0
+EESC 520,EESC,Earth & Environmental Sciences,520,500,graduate,Isotope Hydrology,3,,,,,,0,0
+EESC 540,EESC,Earth & Environmental Sciences,540,500,graduate,"Directed Readings in Earth and Environmental Sciences, Independent Study Format",1-6,,,,,,0,0
+EESC 541,EESC,Earth & Environmental Sciences,541,500,graduate,"Directed Readings in Earth and Environmental Sciences, Lecture and Independent Study Format",1-6,,,,,,0,0
+EESC 550,EESC,Earth & Environmental Sciences,550,500,graduate,Research in Earth and Environmental Sciences,3,,,,,,0,0
+EESC 551,EESC,Earth & Environmental Sciences,551,500,graduate,"Special Topics in Earth and Environmental Sciences, Lecture Format",1-6,,,,,,0,0
+EESC 552,EESC,Earth & Environmental Sciences,552,500,graduate,"Special Topics in Earth and Environmental Sciences, Lecture and Lab Format",1-6,,,,,,0,0
+EESC 553,EESC,Earth & Environmental Sciences,553,500,graduate,"Special Topics in Earth and Environmental Sciences, Experiential Learning Format",1-6,,,,,,0,0
+EESC 560,EESC,Earth & Environmental Sciences,560,500,graduate,Graduate Seminar,1,,,,,,0,0
+EESC 599,EESC,Earth & Environmental Sciences,599,500,graduate,M.Sc. Thesis,23,,,Pass/Fail,,,0,0
+EESC 699,EESC,Earth & Environmental Sciences,699,600,graduate,Ph.D. Dissertation,0,,,Pass/Fail,,,0,0
+FWSC 375,FWSC,Freshwater Science,375,300,undergraduate,Flora and Fauna of Inland Waters,3,"BIOL 125,BIOL 117+BIOL 122",,"Third-year standing in Biology; EESC; Ecology, Evolution and Conservation Biology; Environmental Chemistry; Freshwater Science; or Zoology",,BIOL 375,1,3
+GISC 380,GISC,Geospatial Information Science,380,300,undergraduate,Fundamentals of Geographic Information Science I,3,,,Third-year standing,,"GEOG 370,GEOG 380,EESC 380",0,0
+GISC 381,GISC,Geospatial Information Science,381,300,undergraduate,Fundamentals of Geographic Information Science II,3,"GISC 380,EESC 380,GEOG 380",,,,"GEOG 381,EESC 381",1,3
+GISC 480,GISC,Geospatial Information Science,480,400,undergraduate,Practical Applications in GIS,3,GISC 381,,,,,1,1
+MATH 100,MATH,Mathematics,100,100,undergraduate,Differential Calculus with Applications to Physical Sciences and Engineering,3,"MATH 125,MATH 126",,"Either (a) 67%+ in MATH 12 or PREC 12 (high school), or (b) 60%+ in MATH 125 or MATH 126",,MATH 116,1,2
+MATH 101,MATH,Mathematics,101,100,undergraduate,Integral Calculus with Applications to Physical Sciences and Engineering,3,"MATH 100,MATH 116",,,,"MATH 103,MATH 142",1,2
+MATH 103,MATH,Mathematics,103,100,undergraduate,Integral Calculus with Applications to Life Sciences,3,"MATH 100,MATH 116",,,,"MATH 101,MATH 142",1,2
+MATH 111,MATH,Mathematics,111,100,undergraduate,Finite Mathematics,3,,,High school: Foundations of Mathematics 11; cannot be taken for credit toward B.Sc. or B.Sust.,,,0,0
+MATH 116,MATH,Mathematics,116,100,undergraduate,Calculus I for Management and Economics,3,"MATH 125,MATH 126",,"Either (a) 67%+ in MATH 12 or PREC 12 (high school), or (b) 60%+ in MATH 125 or MATH 126",,MATH 100,1,2
+MATH 125,MATH,Mathematics,125,100,undergraduate,Pre-Calculus,3,,,"High school: one of Principles of Mathematics 11, Pre-Calculus 11, Foundations of Mathematics 12; cannot count toward B.Sc./B.Sust.",,MATH 126,0,0
+MATH 126,MATH,Mathematics,126,100,undergraduate,Basic Mathematics: An Indigenous Perspective,3,,,"High school: one of Principles of Mathematics 11, Pre-Calculus 11, Foundations of Mathematics 12, or permission of Department; cannot count toward B.Sc./B.Sust.",,MATH 125,0,0
+MATH 142,MATH,Mathematics,142,100,undergraduate,Calculus II for Management and Economics,3,"MATH 100,MATH 116",,,,"MATH 101,MATH 103",1,2
+MATH 160,MATH,Mathematics,160,100,undergraduate,Mathematical Reasoning for Arts and Education,3,,,High school: Foundations of Mathematics 11 or Pre-calculus 11; cannot be used toward B.Sc./B.Sust. or B.A. Major in Mathematics,,EDUC 160,0,0
+MATH 200,MATH,Mathematics,200,200,undergraduate,Calculus III,3,"MATH 101,MATH 103",,Either (a) MATH 101 or (b) 65%+ in MATH 103,,,1,2
+MATH 220,MATH,Mathematics,220,200,undergraduate,Mathematical Proof,3,"MATH 101,MATH 103",,Either (a) MATH 101 or (b) 65%+ in MATH 103,,,1,2
+MATH 221,MATH,Mathematics,221,200,undergraduate,Matrix Algebra,3,"MATH 100,MATH 116",,,,,1,2
+MATH 222,MATH,Mathematics,222,200,undergraduate,Linear Algebra,3,MATH 221,,,,,1,1
+MATH 225,MATH,Mathematics,225,200,undergraduate,Introduction to Differential Equations,3,"MATH 101,MATH 103",,Either (a) MATH 101 or (b) 65%+ in MATH 103,MATH 221 corequisite recommended,,1,2
+MATH 303,MATH,Mathematics,303,300,undergraduate,Numerical Analysis,3,"MATH 200;MATH 221;COSC 111,DATA 301",,,,COSC 303,1,4
+MATH 307,MATH,Mathematics,307,300,undergraduate,Applied Linear Algebra,3,MATH 221,,,,,1,1
+MATH 308,MATH,Mathematics,308,300,undergraduate,Euclidean Geometry,3,MATH 220,,,,,1,1
+MATH 311,MATH,Mathematics,311,300,undergraduate,Abstract Algebra I,3,MATH 220,,,,,1,1
+MATH 312,MATH,Mathematics,312,300,undergraduate,Introduction to Number Theory,3,"MATH 220,COSC 221",,,,,1,2
+MATH 313,MATH,Mathematics,313,300,undergraduate,Topics in Number Theory,3,MATH 312,,,,,1,1
+MATH 317,MATH,Mathematics,317,300,undergraduate,Calculus IV,3,MATH 200,,,,,1,1
+MATH 319,MATH,Mathematics,319,300,undergraduate,Introduction to Partial Differential Equations,3,MATH 200;MATH 225,,,,,1,2
+MATH 323,MATH,Mathematics,323,300,undergraduate,Applied Abstract Algebra,3,MATH 221,MATH 311,,,,1,1
+MATH 327,MATH,Mathematics,327,300,undergraduate,Analysis I,3,MATH 220,,,,,1,1
+MATH 328,MATH,Mathematics,328,300,undergraduate,Analysis II,3,MATH 327,,,,,1,1
+MATH 330,MATH,Mathematics,330,300,undergraduate,Abstract Algebra II,3,MATH 311,,,,,1,1
+MATH 339,MATH,Mathematics,339,300,undergraduate,Introduction to Dynamical Systems,3,MATH 200;MATH 225,,,,,1,2
+MATH 340,MATH,Mathematics,340,300,undergraduate,Introduction to Linear Programming,3,MATH 221,,,,,1,1
+MATH 350,MATH,Mathematics,350,300,undergraduate,Complex Variables and Applications,3,MATH 200,,,,,1,1
+MATH 408,MATH,Mathematics,408,400,undergraduate,Differential Geometry,3,MATH 200;MATH 221,,9 credits of 300-level MATH,,,1,2
+MATH 409,MATH,Mathematics,409,400,undergraduate,Mathematics of Financial Derivatives,3,MATH 221;MATH 319;STAT 303,,,,,1,3
+MATH 410,MATH,Mathematics,410,400,undergraduate,Introduction to General Topology,3,MATH 327,,,,,1,1
+MATH 427,MATH,Mathematics,427,400,undergraduate,Real Analysis,3,MATH 327,,,,MATH 527,1,1
+MATH 428,MATH,Mathematics,428,400,undergraduate,Functional Analysis,3,MATH 327,,,,MATH 528,1,1
+MATH 430,MATH,Mathematics,430,400,undergraduate,Special Topics in Optimization and Analysis,3-12,,,Third-year standing and permission of department head,,,0,0
+MATH 432,MATH,Mathematics,432,400,undergraduate,Special Topics in Algebra and Number Theory,3-12,,,Third-year standing and permission of department head,,,0,0
+MATH 441,MATH,Mathematics,441,400,undergraduate,Modelling of Discrete Optimization Problems,3,MATH 340,,,,,1,1
+MATH 442,MATH,Mathematics,442,400,undergraduate,Optimization in Graphs and Networks,3,MATH 340,,,,,1,1
+MATH 443,MATH,Mathematics,443,400,undergraduate,Graph Theory,3,,,At least 12 credits of 300-level MATH,,,0,0
+MATH 448,MATH,Mathematics,448,400,undergraduate,Directed Studies in Mathematics,3-6,,,"15 credits of 300- or 400-level MATH and STAT courses, and permission of department head and faculty supervisor",,,0,0
+MATH 459,MATH,Mathematics,459,400,undergraduate,Mathematical Biology,3,MATH 225,,,MATH 319 recommended,,1,1
+MATH 460,MATH,Mathematics,460,400,undergraduate,Special Topics in Mathematics,3-12,,,Third-year standing and permission of department head,,,0,0
+MATH 461,MATH,Mathematics,461,400,undergraduate,Continuous Optimization,3,MATH 327,,,,,1,1
+MATH 462,MATH,Mathematics,462,400,undergraduate,Derivative-Free Optimization,3,MATH 200;MATH 220;MATH 221,,,MATH 303 or COSC 303 recommended,MATH 562,1,3
+MATH 464,MATH,Mathematics,464,400,undergraduate,Nonconvex Optimization,3,MATH 327,,,,MATH 564,1,1
+MATH 465,MATH,Mathematics,465,400,undergraduate,Splitting Algorithms and Modern Operator Theory,3,MATH 327,,,MATH 461 recommended,MATH 565,1,1
+MATH 510,MATH,Mathematics,510,500,graduate,General Topology,3,,,,,,0,0
+MATH 523,MATH,Mathematics,523,500,graduate,Combinatorial Optimization,3,,,,,,0,0
+MATH 527,MATH,Mathematics,527,500,graduate,Real Analysis,3,,,,,MATH 427,0,0
+MATH 528,MATH,Mathematics,528,500,graduate,Functional Analysis,3,,,,,MATH 428,0,0
+MATH 538,MATH,Mathematics,538,500,graduate,Algebraic Number Theory,3,,,,,,0,0
+MATH 549,MATH,Mathematics,549,500,graduate,Thesis for Master's Degree,12,,,Pass/Fail,,,0,0
+MATH 559,MATH,Mathematics,559,500,graduate,Mathematical Biology,3,,,,,,0,0
+MATH 562,MATH,Mathematics,562,500,graduate,Derivative-Free Optimization,3,,,,,MATH 462,0,0
+MATH 563,MATH,Mathematics,563,500,graduate,Convex Optimization and Non-smooth Analysis,3,,,,,,0,0
+MATH 564,MATH,Mathematics,564,500,graduate,Nonconvex Optimization,3,,,,,MATH 464,0,0
+MATH 565,MATH,Mathematics,565,500,graduate,Splitting Algorithms and Modern Operator Theory,3,,,,,MATH 465,0,0
+MATH 570,MATH,Mathematics,570,500,graduate,Optimization and Analysis I,1-3,,,,,,0,0
+MATH 590,MATH,Mathematics,590,500,graduate,Graduate Seminar,1-3,,,Pass/Fail,,,0,0
+MATH 600,MATH,Mathematics,600,600,graduate,Topics in Algebra,2-15,,,,,,0,0
+MATH 601,MATH,Mathematics,601,600,graduate,Topics in Analysis,2-15,,,,,,0,0
+MATH 604,MATH,Mathematics,604,600,graduate,Topics in Optimization,2-15,,,,,,0,0
+MATH 605,MATH,Mathematics,605,600,graduate,Topics in Applied Mathematics,2-15,,,,,,0,0
+MATH 610,MATH,Mathematics,610,600,graduate,Topics in Pure Mathematics,2-15,,,,,,0,0
+MATH 620,MATH,Mathematics,620,600,graduate,Directed Studies in Mathematics,2-15,,,,,,0,0
+MATH 649,MATH,Mathematics,649,600,graduate,Ph.D. Thesis,0,,,Pass/Fail,,,0,0
+MATH 670,MATH,Mathematics,670,600,graduate,Optimization and Analysis II,1-3,,,,,,0,0
+PHYS 111,PHYS,Physics,111,100,undergraduate,Introductory Physics for the Physical Sciences I,3,"MATH 125,MATH 126","MATH 100,MATH 116","High school alternative: Physics 11 or 12, and MATH 12 or PREC 12 (in place of MATH 125/126)",Physics 12 strongly recommended,PHYS 112,1,2
+PHYS 112,PHYS,Physics,112,100,undergraduate,Introductory Physics for the Life Sciences I,3,"MATH 125,MATH 126",,High school alternative: MATH 12 or PREC 12,Physics 11 and 12 strongly recommended; concurrent MATH 100 strongly recommended,PHYS 111,1,2
+PHYS 121,PHYS,Physics,121,100,undergraduate,Introductory Physics for the Physical Sciences II,3,"MATH 100,MATH 116;PHYS 111,PHYS 112","MATH 101,MATH 103",,,PHYS 122,1,4
+PHYS 122,PHYS,Physics,122,100,undergraduate,Introductory Physics for the Life Sciences II,3,"MATH 100,MATH 116;PHYS 111,PHYS 112","MATH 101,MATH 103",,,PHYS 121,1,4
+PHYS 200,PHYS,Physics,200,200,undergraduate,Relativity and Quanta,3,"MATH 101,MATH 103;PHYS 121,PHYS 122",,,,,1,4
+PHYS 215,PHYS,Physics,215,200,undergraduate,Thermodynamics,3,"MATH 101,MATH 103;PHYS 121,PHYS 122",,,,,1,4
+PHYS 216,PHYS,Physics,216,200,undergraduate,Mechanics I,3,"MATH 100,MATH 116;PHYS 111,PHYS 112",,,,,1,4
+PHYS 225,PHYS,Physics,225,200,undergraduate,Intermediate Electricity and Magnetism,3,"MATH 101,MATH 103;PHYS 121,PHYS 122",,,,,1,4
+PHYS 231,PHYS,Physics,231,200,undergraduate,Introduction to Electronics,3,"MATH 101,MATH 103;PHYS 121,PHYS 122",,,,,1,4
+PHYS 232,PHYS,Physics,232,200,undergraduate,Modern Physics Laboratory,3,"MATH 101,MATH 103;PHYS 121,PHYS 122",,,,,1,4
+PHYS 301,PHYS,Physics,301,300,undergraduate,Electricity and Magnetism,3,"MATH 317;PHYS 121,PHYS 122",,,,,1,3
+PHYS 304,PHYS,Physics,304,300,undergraduate,Introduction to Quantum Mechanics,3,MATH 225;PHYS 200,,,,,1,2
+PHYS 305,PHYS,Physics,305,300,undergraduate,Introduction to Biophysics,3,"MATH 101,MATH 103;PHYS 121,PHYS 122",,"Third-year standing in Science, or a 200-level PHYS course taken concurrently",,,1,4
+PHYS 310,PHYS,Physics,310,300,undergraduate,Introduction to Medical Physics,3,"MATH 101,MATH 103;PHYS 121,PHYS 122",,"Third-year standing in Science, or a 200-level PHYS course taken concurrently",,,1,4
+PHYS 314,PHYS,Physics,314,300,undergraduate,Fluids,3,"MATH 101,MATH 103;PHYS 121,PHYS 122",,Third-year standing in Science,,,1,4
+PHYS 320,PHYS,Physics,320,300,undergraduate,Environmental Physics,3,"MATH 101,MATH 103;PHYS 121,PHYS 122",,"Third-year standing in Science, or a 200-level PHYS course taken concurrently",,,1,4
+PHYS 324,PHYS,Physics,324,300,undergraduate,Waves,3,"MATH 200;PHYS 200,PHYS 216",,,,,1,3
+PHYS 328,PHYS,Physics,328,300,undergraduate,Advanced Mechanics,3,MATH 200;MATH 221;MATH 225;PHYS 216,,,,,1,4
+PHYS 331,PHYS,Physics,331,300,undergraduate,Experimental Physics I,3,PHYS 231;PHYS 232,,,,,1,2
+PHYS 335,PHYS,Physics,335,300,undergraduate,The Universe from Aristotle to Hawking,3,,,Third-year standing; cannot replace required courses in the Physics Major,,,0,0
+PHYS 336,PHYS,Physics,336,300,undergraduate,Introduction to Medical Imaging and Radiation Safety,3,"PHYS 121,PHYS 122",,Score above 60% in PHYS 121/122; third-year standing,,COSC 335,1,2
+PHYS 360,PHYS,Physics,360,300,undergraduate,Special Topics in Physics,3-6,"MATH 101,MATH 103;PHYS 121,PHYS 122",,,,,1,4
+PHYS 400,PHYS,Physics,400,400,undergraduate,Introduction to Elementary Particles,3,PHYS 304,,,,,1,1
+PHYS 401,PHYS,Physics,401,400,undergraduate,Electromagnetic Theory,3,PHYS 301,,,,,1,1
+PHYS 402,PHYS,Physics,402,400,undergraduate,Advanced Quantum Mechanics,3,PHYS 304,,,,,1,1
+PHYS 403,PHYS,Physics,403,400,undergraduate,Statistical Mechanics,3,MATH 200;PHYS 215,PHYS 304,,,,1,2
+PHYS 407,PHYS,Physics,407,400,undergraduate,Introduction to General Relativity,3,MATH 225;MATH 317;PHYS 200;PHYS 216,,,,,1,4
+PHYS 408,PHYS,Physics,408,400,undergraduate,Optics,3,,PHYS 301,,,,0,0
+PHYS 418,PHYS,Physics,418,400,undergraduate,Methods of Theoretical Physics,3,MATH 221;MATH 225;MATH 317;PHYS 200;PHYS 216,,,,,1,5
+PHYS 420,PHYS,Physics,420,400,undergraduate,Data and Image Processing,3,MATH 225;MATH 317,,3 credits in 200-level Physics,,,1,2
+PHYS 425,PHYS,Physics,425,400,undergraduate,Low-Temperature Physics,3,PHYS 215;PHYS 304,,,,,1,2
+PHYS 441,PHYS,Physics,441,400,undergraduate,Experimental Physics II,3,PHYS 331,,,,,1,1
+PHYS 448,PHYS,Physics,448,400,undergraduate,Directed Studies in Physics,2-6,,,Permission of department head,,,0,0
+PHYS 449,PHYS,Physics,449,400,undergraduate,Honours Thesis,6,,,,,"PHYS 450,PHYS 451",0,0
+PHYS 450,PHYS,Physics,450,400,undergraduate,Honours Thesis Part I,3,,,Permission of department head; restricted to Physics or Combined Physics and Mathematics Honours,,PHYS 449,0,0
+PHYS 451,PHYS,Physics,451,400,undergraduate,Honours Thesis Part II,3,PHYS 450,,,,PHYS 449,1,1
+PHYS 474,PHYS,Physics,474,400,undergraduate,Solid State Physics,3,PHYS 200;PHYS 216;PHYS 304,,,,,1,3
+PHYS 534,PHYS,Physics,534,500,graduate,Radiotherapy Physics I,3,,,,,,0,0
+PHYS 535,PHYS,Physics,535,500,graduate,Radiotherapy Physics II,3,PHYS 534,,,,,1,1
+PHYS 539,PHYS,Physics,539,500,graduate,Radiation Dosimetry,3,,,,,,0,0
+PHYS 540,PHYS,Physics,540,500,graduate,Medical Imaging,3,,,,,,0,0
+PHYS 544,PHYS,Physics,544,500,graduate,Radiation Biophysics,3,,,,,,0,0
+PHYS 546,PHYS,Physics,546,500,graduate,Clinical Shadowing,2,,,Restricted to graduate students in Medical Physics; Pass/Fail,,,0,0
+PHYS 547,PHYS,Physics,547,500,graduate,Anatomy and Physiology for the Medical Physicist,1,,,Restricted to graduate students in Medical Physics; Pass/Fail,,,0,0
+PHYS 548,PHYS,Physics,548,500,graduate,Special Topics in Medical Physics,3-6,,,Permission of department head and registration in Medical Physics graduate program,,,0,0
+PHYS 549,PHYS,Physics,549,500,graduate,Master's Thesis,12,,,Pass/Fail,,,0,0
+PHYS 649,PHYS,Physics,649,600,graduate,Doctoral Dissertation,0,,,Pass/Fail,,,0,0
+SCIE 100,SCIE,Science,100,100,undergraduate,Interdisciplinary Field Studies for Science Majors,3,,,Permission of the Dean or delegate; special fee; priority to B.Sc. students between first and second year,,,0,0
+STAT 121,STAT,Statistics,121,100,undergraduate,Elementary Statistics,3,"MATH 125,MATH 126,MATH 100",,"Either (a) 60%+ in MATH 125/126, (b) 67%+ in MATH 12 or PREC 12 (high school), or (c) MATH 100",,STAT 124,1,3
+STAT 124,STAT,Statistics,124,100,undergraduate,Business Statistics,3,"MATH 125,MATH 126,MATH 100",,"High school alternative: Principles of Mathematics 11, Pre-Calculus 11, or Foundations of Mathematics 12",,STAT 121,1,3
+STAT 203,STAT,Statistics,203,200,undergraduate,Introduction to Probability,3,"MATH 101,MATH 103,MATH 142",DATA 101,,,STAT 230,1,3
+STAT 205,STAT,Statistics,205,200,undergraduate,Introduction to Mathematical Statistics,3,STAT 203,,,,STAT 230,1,1
+STAT 230,STAT,Statistics,230,200,undergraduate,Introductory Statistics,3,"MATH 101,MATH 103,MATH 142;DATA 101,COSC 221",,,,"STAT 203,STAT 205",1,5
+STAT 303,STAT,Statistics,303,300,undergraduate,Intermediate Probability,3,MATH 200;STAT 203,,,,,1,2
+STAT 324,STAT,Statistics,324,300,undergraduate,Mathematical Finance,3,"MATH 200;STAT 205,STAT 230",,,,,1,3
+STAT 400,STAT,Statistics,400,400,undergraduate,Statistical Communication and Consulting,3,DATA 310,,,DATA 315 strongly recommended,DATA 500,1,1
+STAT 401,STAT,Statistics,401,400,undergraduate,Probability and Statistical Inference,3,STAT 303,,,,,1,1
+STAT 403,STAT,Statistics,403,400,undergraduate,Stochastic Processes,3,STAT 303,,,,,1,1
+STAT 406,STAT,Statistics,406,400,undergraduate,Environmetrics,3,DATA 310,,,,,1,1
+STAT 448,STAT,Statistics,448,400,undergraduate,Directed Studies in Statistics,3-6,,,15 credits of 300- or 400-level MATH and STAT courses; permission of department head and faculty supervisor,,,0,0
+STAT 449,STAT,Statistics,449,400,undergraduate,Special Topics in Statistics,3-9,,,Permission of department head,,,0,0
+STAT 507,STAT,Statistics,507,500,graduate,Sampling and Design,3,,,,,DATA 407,0,0
+STAT 538,STAT,Statistics,538,500,graduate,Advanced Statistical Modelling,3,,,,,DATA 410,0,0
+STAT 547,STAT,Statistics,547,500,graduate,Topics in Statistics,2-15,,,,,,0,0
+STAT 560,STAT,Statistics,560,500,graduate,Probability and Stochastic Processes,3,,,,,,0,0
+SUST 100,SUST,Sustainability,100,100,undergraduate,"Sustainability: People, Place, and Process",3,,,,,,0,0
+SUST 104,SUST,Sustainability,104,100,undergraduate,Introduction to Environmental Humanities,3,,,,SUST 100 recommended,,0,0
+SUST 200,SUST,Sustainability,200,200,undergraduate,"Applied Sustainability: Science, Practice and Management",3,"SUST 100,EESC 101",,,,,1,2
+SUST 201,SUST,Sustainability,201,200,undergraduate,Introduction to Research in Sustainability and Geography,3,,,,,"GEOG 201,GEOG 371",0,0
+SUST 202,SUST,Sustainability,202,200,undergraduate,Community Service Learning,3,,,Restricted to Bachelor of Sustainability students; Pass/Fail,,,0,0
+SUST 204,SUST,Sustainability,204,200,undergraduate,Creative Communication and Engagement,3,,,,SUST 104 recommended,THTR 204,0,0
+SUST 205,SUST,Sustainability,205,200,undergraduate,Sustainability Economics,3,,,,SUST 200 recommended,,0,0
+SUST 300,SUST,Sustainability,300,300,undergraduate,"Regional Sustainability: Systems, Scale and Governance",3,SUST 200,,,,,1,1
+SUST 302,SUST,Sustainability,302,300,undergraduate,Community Service Learning,3,SUST 202,,Restricted to Bachelor of Sustainability students; Pass/Fail,,,1,1
+SUST 304,SUST,Sustainability,304,300,undergraduate,Place-based Methods for Interdisciplinary Research,3,SUST 200,,,,CULT 304,1,1
+SUST 400,SUST,Sustainability,400,400,undergraduate,Capstone Project in Sustainability,6,SUST 304,,Restricted to Bachelor of Sustainability students,,,1,1
+SUST 402,SUST,Sustainability,402,400,undergraduate,Community Service Learning,1,SUST 302,,Restricted to Bachelor of Sustainability students; Pass/Fail,,,1,1
+SUST 491,SUST,Sustainability,491,400,undergraduate,"Special Topics in Sustainability, Lecture and Laboratory Format",3-9,SUST 100,,Third-year standing,,"SUST 492,SUST 493,SUST 494,SUST 495,SUST 496",1,1
+SUST 492,SUST,Sustainability,492,400,undergraduate,"Special Topics in Sustainability, Lecture Format",3-9,SUST 100,,Third-year standing,,"SUST 491,SUST 493,SUST 494,SUST 495,SUST 496",1,1
+SUST 493,SUST,Sustainability,493,400,undergraduate,"Special Topics in Sustainability, Laboratory Format",3-9,SUST 100,,Third-year standing,,"SUST 491,SUST 492,SUST 494,SUST 495,SUST 496",1,1
+SUST 494,SUST,Sustainability,494,400,undergraduate,"Special Topics in Sustainability, Discussion Format",3-9,SUST 100,,Third-year standing,,"SUST 491,SUST 492,SUST 493,SUST 495,SUST 496",1,1
+SUST 495,SUST,Sustainability,495,400,undergraduate,"Special Topics in Sustainability, Independent Study Format",3-9,SUST 100,,Third-year standing,,"SUST 491,SUST 492,SUST 493,SUST 494,SUST 496",1,1
+SUST 496,SUST,Sustainability,496,400,undergraduate,"Special Topics in Sustainability, Experiential Learning Format",3-9,SUST 100,,Third-year standing,,"SUST 491,SUST 492,SUST 493,SUST 494,SUST 495",1,1
