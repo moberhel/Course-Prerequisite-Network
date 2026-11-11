@@ -1,5 +1,29 @@
 # UBCO prerequisite data (COSC 421 project)
 
+## Running the analysis
+Run every script from the repository root (R 4.x, package `igraph`).
+
+All research-question scripts build the network the same way, through `R/00_load_network.R`:
+
+```r
+source("R/00_load_network.R")
+course_data <- load_course_data()          # cleaned node + edge tables
+g <- build_prereq_graph(course_data)       # prerequisite -> course graph (2,041 nodes, 3,363 edges)
+g_all <- build_prereq_graph(course_data, c("prereq", "coreq", "recommended"))
+write.csv(tbl, output_path("tables", "rq1_top10.csv"), row.names = FALSE)
+ggsave(output_path("figures", "rq1_network.png"))
+```
+
+What the loader adds on top of the raw CSVs:
+- True/False columns become logicals; `standing_required` is normalised (`3rd` -> `third`).
+- `nodes$retired` (56 legacy codes) and `nodes$upper_level` (300+ and in the current calendar).
+- `edges$share` = k / `n_alternatives` (a "two of 13" edge counts 2/13; `weight` is left unchanged).
+- Checks that every edge endpoint exists and that there are no duplicate edges of the same type and no self-loops.
+
+Generated tables and figures go in `output/tables/` and `output/figures/`.
+
+Tests: `Rscript tests/test_load_network.R` (base R, no extra packages).
+
 Source: UBC Okanagan Academic Calendar, Course Descriptions (https://okanagan.calendar.ubc.ca/course-descriptions). Collection date is not recorded here.
 
 ## Files
