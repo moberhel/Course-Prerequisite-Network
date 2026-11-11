@@ -52,8 +52,10 @@ load_course_data <- function(data_dir = "Data") {
     }
   }
 
-  nodes <- read.csv(nodes_file, stringsAsFactors = FALSE, na.strings = "")
-  edges <- read.csv(edges_file, stringsAsFactors = FALSE, na.strings = "")
+  # Blank cells and R-style "NA" both mean missing, so files re-saved with
+  # write.csv() load the same way as the originals.
+  nodes <- read.csv(nodes_file, stringsAsFactors = FALSE, na.strings = c("", "NA"))
+  edges <- read.csv(edges_file, stringsAsFactors = FALSE, na.strings = c("", "NA"))
 
   for (col in NODE_FLAG_COLUMNS) nodes[[col]] <- as_flag(nodes[[col]], col)
   for (col in EDGE_FLAG_COLUMNS) edges[[col]] <- as_flag(edges[[col]], col)
