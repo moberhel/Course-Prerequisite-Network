@@ -23,6 +23,20 @@
 | COSC 222 Data Structures | 12 | 9 | 1 |
 | MATH 220 Mathematical Proof | 12 | 4 | 1 |
 
+### Constraint overview
+
+![Top bottleneck courses ranked by the number of upper-level Science courses blocked when each course is removed](top_bottleneck_courses.png)
+
+*Figure 1. The removal-impact ranking identifies bottlenecks that would block upper-level Science course access.*
+
+![Entry-level blocking distribution by subject](entry_level_blocking_by_subject.png)
+
+*Figure 2. Entry-level courses in BIOL and MATH account for a large share of the blocking impact.*
+
+![Comparison of betweenness centrality and removal impact](betweenness_vs_blocked.png)
+
+*Figure 3. Betweenness centrality and upper-level blocking measure different kinds of access constraints.*
+
 **Composite top 5:** COSC 121, MATH 221, COSC 221, MATH 100, COSC 222.
 
 - **Optional-looking courses can be hidden bottlenecks.** MATH 200 (the example in the proposal) is not needed by every program, yet it is a required prerequisite for 22 upper-level courses across five subjects. MATH 221 reaches five subjects too.
