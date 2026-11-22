@@ -24,6 +24,10 @@ Generated tables and figures go in `output/tables/` and `output/figures/`.
 
 Tests: `Rscript tests/test_load_network.R` (base R, no extra packages).
 
+## Research questions
+- RQ1: Run `Rscript RQ1/RQ1_network_analysis.R` to generate centrality tables and figures.
+- RQ2: Run `Rscript RQ2/RQ2_network_analysis.R` to generate access-constraint tables and figures.
+
 Source: UBC Okanagan Academic Calendar, Course Descriptions (https://okanagan.calendar.ubc.ca/course-descriptions). Collection date is not recorded here.
 
 ## Files
