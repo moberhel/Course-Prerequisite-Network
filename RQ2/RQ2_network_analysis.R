@@ -2,16 +2,17 @@
 # Which prerequisite courses create the greatest access constraints for
 # upper-level courses and specializations within UBCO Faculty of Science programs?
 #
-# Run from the repository root:  Rscript RQ2_network_analysis.R
-# Outputs (written to the working directory):
-#   RQ2_constraint_results.csv        one row per Science course, all RQ2 metrics
-#   RQ2_removal_impact_detail.csv     which upper-level courses each removal blocks
-#   RQ2_upper_level_constraints.csv   one row per Science 300/400-level course
-#   RQ2_subject_impact.csv            Science subject x subject blocked-course matrix
-#   RQ2_figures/*.png                 figures for the report
+# Run from the repository root: Rscript RQ2/RQ2_network_analysis.R
+# Outputs:
+#   output/tables/rq2_constraint_results.csv
+#   output/tables/rq2_removal_impact_detail.csv
+#   output/tables/rq2_upper_level_constraints.csv
+#   output/tables/rq2_subject_impact.csv
+#   output/figures/rq2_*.png
 
 library(igraph)
 library(ggplot2)
+source("R/00_load_network.R")
 
 # ------------------------------------------------------------------
 # 0. Configuration (edit here if the Science definition changes)
@@ -21,16 +22,12 @@ SCIENCE_SUBJECTS <- c("ASTR", "BIOC", "BIOL", "CHEM", "COSC", "DATA",
 UPPER_LEVEL <- 300   # "upper-level" = 300- and 400-level courses
 TOP_N       <- 15
 
-dir.create("RQ2_figures", showWarnings = FALSE)
-
 # ------------------------------------------------------------------
 # 1. Load data
 # ------------------------------------------------------------------
-courses <- read.csv("Data/ubco_courses_nodes.csv", stringsAsFactors = FALSE)
-edges   <- read.csv("Data/ubco_prereq_edges.csv",  stringsAsFactors = FALSE)
-
-edges$in_every_path <- as.logical(edges$in_every_path)
-courses$in_current_calendar <- as.logical(courses$in_current_calendar)
+course_data <- load_course_data()
+courses <- course_data$nodes
+edges <- course_data$edges
 
 # Prerequisite edges only (co-requisites and "recommended" are not access barriers)
 pre <- subset(edges, type == "prereq" & !is.na(source) & !is.na(target))
@@ -51,12 +48,7 @@ cat("Science upper-level courses:       ", sum(is_sci_up), "\n")
 # ------------------------------------------------------------------
 # 2. Build the directed prerequisite network (prerequisite -> course unlocked)
 # ------------------------------------------------------------------
-nodes <- data.frame(name = courses$course, subject = courses$subject,
-                    level = courses$level, title = courses$title,
-                    stringsAsFactors = FALSE)
-g <- graph_from_data_frame(pre[, c("source", "target")], directed = TRUE,
-                           vertices = nodes)
-g <- simplify(g, remove.multiple = TRUE, remove.loops = TRUE)
+g <- build_prereq_graph(course_data)
 cat("Network:", vcount(g), "nodes,", ecount(g), "prerequisite edges\n")
 cat("Network is a DAG:", is_dag(g), "\n")
 
@@ -185,7 +177,7 @@ for (j in seq_along(cand)) {
                               stringsAsFactors = FALSE)
 }
 detail <- do.call(rbind, detail)
-write.csv(detail, "RQ2_removal_impact_detail.csv", row.names = FALSE)
+write.csv(detail, output_path("tables", "rq2_removal_impact_detail.csv"), row.names = FALSE)
 
 # ------------------------------------------------------------------
 # 7. Combine metrics for all Science courses
@@ -218,7 +210,7 @@ out$constraint_rank_score <- rowMeans(cbind(
   rank(-out$blocked_sci_upper, ties.method = "average")))
 out <- out[order(out$constraint_rank_score, -out$blocked_sci_upper), ]
 out$constraint_rank <- seq_len(nrow(out))
-write.csv(out, "RQ2_constraint_results.csv", row.names = FALSE)
+write.csv(out, output_path("tables", "rq2_constraint_results.csv"), row.names = FALSE)
 
 cat("\nTop", TOP_N, "access-constraining Science courses:\n")
 print(head(out[, c("constraint_rank", "course", "title", "betweenness_sci",
@@ -253,7 +245,7 @@ upper <- data.frame(
   standing_required = courses$standing_required[up_i],
   stringsAsFactors = FALSE)
 upper <- upper[order(-upper$single_points_of_failure, -upper$longest_prereq_chain), ]
-write.csv(upper, "RQ2_upper_level_constraints.csv", row.names = FALSE)
+write.csv(upper, output_path("tables", "rq2_upper_level_constraints.csv"), row.names = FALSE)
 
 # Subject-to-subject impact (which areas are held up by which prerequisite subjects)
 if (!is.null(detail) && nrow(detail) > 0) {
@@ -262,7 +254,8 @@ if (!is.null(detail) && nrow(detail) > 0) {
                               blocked_subject = detail$blocked_subject))
   subj <- subj[subj$Freq > 0, ]
   names(subj)[3] <- "course_pairs_blocked"
-  write.csv(subj[order(-subj$course_pairs_blocked), ], "RQ2_subject_impact.csv", row.names = FALSE)
+  write.csv(subj[order(-subj$course_pairs_blocked), ],
+            output_path("tables", "rq2_subject_impact.csv"), row.names = FALSE)
 }
 
 # ------------------------------------------------------------------
@@ -277,7 +270,8 @@ p1 <- ggplot(top, aes(x = label, y = blocked_sci_upper, fill = subject)) +
   labs(title = "Science courses whose removal blocks the most upper-level courses",
        subtitle = "Top 15 by composite constraint rank; courses blocked given AND/OR prerequisite logic",
        x = NULL, y = "Science 300/400-level courses that become inaccessible", fill = "Subject")
-ggsave("RQ2_figures/top_bottleneck_courses.png", p1, width = 9, height = 6, dpi = 150)
+ggsave(output_path("figures", "rq2_top_bottleneck_courses.png"),
+       p1, width = 9, height = 6, dpi = 150)
 
 lab <- head(out, 12)
 p2 <- ggplot(out, aes(x = betweenness_sci_norm, y = blocked_sci_upper, colour = subject)) +
@@ -287,7 +281,8 @@ p2 <- ggplot(out, aes(x = betweenness_sci_norm, y = blocked_sci_upper, colour = 
   labs(title = "Bottleneck position vs. hard blocking (Science courses)",
        x = "Betweenness centrality (Science subgraph, normalised)",
        y = "Science upper-level courses blocked if removed", colour = "Subject")
-ggsave("RQ2_figures/betweenness_vs_blocked.png", p2, width = 9, height = 6, dpi = 150)
+ggsave(output_path("figures", "rq2_betweenness_vs_blocked.png"),
+       p2, width = 9, height = 6, dpi = 150)
 
 subj_tot <- aggregate(cbind(blocked_sci_upper, reach_sci_upper) ~ subject, data = out, FUN = max)
 p3 <- ggplot(out[out$level <= 200, ], aes(x = reorder(subject, blocked_sci_upper, FUN = max),
@@ -296,7 +291,7 @@ p3 <- ggplot(out[out$level <= 200, ], aes(x = reorder(subject, blocked_sci_upper
   coord_flip() +
   labs(title = "Entry-level (100/200) courses: blocking impact by subject",
        x = NULL, y = "Science upper-level courses blocked if removed")
-ggsave("RQ2_figures/entry_level_blocking_by_subject.png", p3, width = 8, height = 5, dpi = 150)
+ggsave(output_path("figures", "rq2_entry_level_blocking_by_subject.png"),
+       p3, width = 8, height = 5, dpi = 150)
 
-cat("\nDone. Files written: RQ2_constraint_results.csv, RQ2_removal_impact_detail.csv,",
-    "RQ2_upper_level_constraints.csv, RQ2_subject_impact.csv, RQ2_figures/\n")
+cat("\nDone. Generated tables are in output/tables/ and figures are in output/figures/\n")

@@ -25,15 +25,15 @@
 
 ### Constraint overview
 
-![Top bottleneck courses ranked by the number of upper-level Science courses blocked when each course is removed](top_bottleneck_courses.png)
+![Top bottleneck courses ranked by the number of upper-level Science courses blocked when each course is removed](../output/figures/rq2_top_bottleneck_courses.png)
 
 *Figure 1. The removal-impact ranking identifies bottlenecks that would block upper-level Science course access.*
 
-![Entry-level blocking distribution by subject](entry_level_blocking_by_subject.png)
+![Entry-level blocking distribution by subject](../output/figures/rq2_entry_level_blocking_by_subject.png)
 
 *Figure 2. Entry-level courses in BIOL and MATH account for a large share of the blocking impact.*
 
-![Comparison of betweenness centrality and removal impact](betweenness_vs_blocked.png)
+![Comparison of betweenness centrality and removal impact](../output/figures/rq2_betweenness_vs_blocked.png)
 
 *Figure 3. Betweenness centrality and upper-level blocking measure different kinds of access constraints.*
 
@@ -56,4 +56,4 @@
 - PSYO is not treated as Faculty of Science; add it to `SCIENCE_SUBJECTS` at the top of the script if your program counts it.
 
 ## Files
-`RQ2_network_analysis.R` · `RQ2_constraint_results.csv` · `RQ2_removal_impact_detail.csv` · `RQ2_upper_level_constraints.csv` · `RQ2_subject_impact.csv` · `RQ2_figures/` (3 PNGs)
+`RQ2_network_analysis.R` · `../output/tables/rq2_constraint_results.csv` · `../output/tables/rq2_removal_impact_detail.csv` · `../output/tables/rq2_upper_level_constraints.csv` · `../output/tables/rq2_subject_impact.csv` · `../output/figures/` (3 RQ2 PNGs)
