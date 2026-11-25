@@ -79,6 +79,28 @@ write.csv(top_20,
           output_path("tables", "rq1_top20_courses.csv"),
           row.names = FALSE)
 
+# Department structure: induced prerequisite subgraph of every subject with 10+
+# courses. Path lengths are over reachable ordered pairs only.
+big_subjects <- sort(names(which(table(nodes$subject) >= 10)))
+department_structure <- do.call(rbind, lapply(big_subjects, function(s) {
+  sg <- induced_subgraph(g, V(g)$subject == s)
+  n <- vcount(sg)
+  paths <- mean_distance(sg, directed = TRUE, unconnected = TRUE,
+                         weights = NA, details = TRUE)
+  data.frame(
+    subject = s,
+    courses = n,
+    internal_edges = ecount(sg),
+    density = edge_density(sg),
+    average_path_length = paths$res,
+    reachability_pct = 100 * (n * (n - 1) - paths$unconnected) / (n * (n - 1)),
+    longest_shortest_path = diameter(sg, directed = TRUE, unconnected = TRUE, weights = NA)
+  )
+}))
+write.csv(department_structure,
+          output_path("tables", "rq1_department_structure.csv"),
+          row.names = FALSE)
+
 cat("Network:", vcount(g), "courses,", ecount(g), "prerequisite edges\n")
 cat("Network is a DAG:", is_dag(g), "\n")
 cat("\nTop 20 central courses:\n")
