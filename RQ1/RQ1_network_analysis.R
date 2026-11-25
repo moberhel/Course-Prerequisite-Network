@@ -156,3 +156,36 @@ p3 <- ggplot(out_degree_long, aes(x = value)) +
   )
 ggsave(output_path("figures", "rq1_out_degree_distribution.png"),
        p3, width = 9, height = 7, dpi = 150)
+
+figure_measures <- c(
+  out_degree = "Raw out-degree",
+  weighted_out_degree = "Option-weighted out-degree",
+  pagerank_weighted = "PageRank (reversed, option-weighted)",
+  harmonic_out_weighted = "Harmonic out (option-weighted)",
+  downstream_reach = "Downstream reach",
+  betweenness = "Betweenness"
+)
+top_by_measure <- do.call(rbind, lapply(names(figure_measures), function(m) {
+  top <- head(results[order(-results[[m]]), ], 10)
+  data.frame(
+    measure = factor(figure_measures[[m]], levels = figure_measures),
+    key = paste(m, top$course),
+    degree_type = factor(rep(degree_types, each = 10), levels = degree_types),
+    value = c(top$out_degree, top$weighted_out_degree)
+  )
+}))
+top_by_measure$key <- factor(top_by_measure$key, levels = rev(unique(top_by_measure$key)))
+p4 <- ggplot(top_by_measure, aes(x = value, y = key, fill = degree_type)) +
+  geom_col(position = position_dodge(width = 0.8), width = 0.75) +
+  facet_wrap(~ measure, scales = "free_y", ncol = 2) +
+  scale_y_discrete(labels = function(k) sub("^\\S+ ", "", k)) +
+  scale_fill_manual(values = c("#BAB0AC", "#4C78A8")) +
+  labs(
+    title = "Top 10 courses by each measure: raw vs option-weighted out-degree",
+    x = "Immediate downstream courses",
+    y = NULL,
+    fill = NULL
+  ) +
+  theme(legend.position = "top")
+ggsave(output_path("figures", "rq1_top10_by_measure.png"),
+       p4, width = 10, height = 11, dpi = 150)
