@@ -13,6 +13,8 @@ nodes <- course_data$nodes
 
 in_degree <- degree(g, mode = "in", normalized = FALSE)
 out_degree <- degree(g, mode = "out", normalized = FALSE)
+weighted_out_degree <- strength(g, mode = "out", weights = E(g)$option_weight)
+mandatory_dependents <- strength(g, mode = "out", weights = as.numeric(E(g)$hard_requirement))
 betweenness_full <- betweenness(g, directed = TRUE, normalized = TRUE)
 # PageRank on the reversed graph, so importance flows from a course back to its
 # prerequisites. weights = NA stops igraph using the raw `weight` column.
@@ -50,6 +52,8 @@ results <- data.frame(
   title = nodes$title,
   in_degree = as.integer(in_degree[nodes$course]),
   out_degree = as.integer(out_degree[nodes$course]),
+  weighted_out_degree = weighted_out_degree[nodes$course],
+  mandatory_dependents = as.integer(mandatory_dependents[nodes$course]),
   betweenness = betweenness_full[nodes$course],
   harmonic_out = harmonic_out[nodes$course],
   harmonic_in = harmonic_in[nodes$course],
