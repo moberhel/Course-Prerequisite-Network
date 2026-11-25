@@ -109,14 +109,14 @@ print(top_20[, c("composite_rank", "course", composite_measures, "composite_scor
 
 theme_set(theme_minimal(base_size = 12))
 
-top_15 <- head(results, 15)
-top_15$label <- factor(top_15$course, levels = rev(top_15$course))
-p1 <- ggplot(top_15, aes(x = label, y = betweenness, fill = subject)) +
+top_betweenness <- head(results[order(-results$betweenness), ], 15)
+top_betweenness$label <- factor(top_betweenness$course, levels = rev(top_betweenness$course))
+p1 <- ggplot(top_betweenness, aes(x = label, y = betweenness, fill = subject)) +
   geom_col() +
   coord_flip() +
   labs(
     title = "Courses with the greatest betweenness centrality",
-    subtitle = "Top 15 by composite centrality rank",
+    subtitle = "Top 15 by normalized betweenness (bridging; not part of the composite)",
     x = NULL,
     y = "Normalized betweenness",
     fill = "Subject"
@@ -124,27 +124,35 @@ p1 <- ggplot(top_15, aes(x = label, y = betweenness, fill = subject)) +
 ggsave(output_path("figures", "rq1_betweenness.png"),
        p1, width = 9, height = 6, dpi = 150)
 
-p2 <- ggplot(results, aes(x = betweenness, y = downstream_reach,
-                          colour = subject)) +
-  geom_point(alpha = 0.55, size = 1.5) +
-  geom_text(data = top_15, aes(label = course),
-            size = 3, vjust = -0.7, check_overlap = TRUE,
-            show.legend = FALSE) +
+top_15 <- head(results, 15)
+p2 <- ggplot(results, aes(x = betweenness, y = downstream_reach)) +
+  geom_point(alpha = 0.4, size = 1.5, colour = "grey50") +
+  geom_point(data = top_15, colour = "#E45756", size = 2) +
+  geom_text(data = top_15, aes(label = course), colour = "#E45756",
+            size = 3, hjust = -0.15, check_overlap = TRUE) +
   labs(
     title = "Bridge position vs. downstream course reach",
+    subtitle = "Red: top 15 by composite foundation rank",
     x = "Normalized betweenness",
-    y = "Courses reachable downstream",
-    colour = "Subject"
+    y = "Courses reachable downstream"
   )
 ggsave(output_path("figures", "rq1_reach_vs_betweenness.png"),
        p2, width = 9, height = 6, dpi = 150)
 
-p3 <- ggplot(results, aes(x = out_degree)) +
+degree_types <- c("Raw out-degree", "Option-weighted out-degree")
+out_degree_long <- data.frame(
+  type = factor(rep(degree_types, each = nrow(results)), levels = degree_types),
+  value = c(results$out_degree, results$weighted_out_degree)
+)
+p3 <- ggplot(out_degree_long, aes(x = value)) +
   geom_histogram(binwidth = 1, fill = "#4C78A8", colour = "white") +
+  facet_wrap(~ type, ncol = 1) +
+  scale_y_continuous(transform = "log1p", breaks = c(0, 1, 10, 100, 1000)) +
   labs(
     title = "Distribution of prerequisite out-degree",
-    x = "Number of immediate downstream courses",
-    y = "Number of courses"
+    subtitle = "Option-weighted: each edge counts its share of the dependent course's requirement",
+    x = "Immediate downstream courses",
+    y = "Number of courses (log scale)"
   )
 ggsave(output_path("figures", "rq1_out_degree_distribution.png"),
-       p3, width = 9, height = 5.5, dpi = 150)
+       p3, width = 9, height = 7, dpi = 150)
