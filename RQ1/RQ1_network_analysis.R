@@ -26,6 +26,10 @@ pagerank_weighted <- page_rank(g_rev, weights = E(g_rev)$option_weight)$vector
 
 harmonic_out <- harmonic_centrality(g, mode = "out", weights = NA, normalized = TRUE)
 harmonic_in <- harmonic_centrality(g, mode = "in", weights = NA, normalized = TRUE)
+# Option-weighted harmonic: an edge's length is 1 / option_weight, so a required
+# edge is one step and one option out of four counts as four steps.
+harmonic_out_weighted <- harmonic_centrality(g, mode = "out", weights = 1 / E(g)$option_weight,
+                                             normalized = TRUE)
 
 reach <- setNames(ego_size(g, order = vcount(g), mode = "out", mindist = 1), V(g)$name)
 prereq_count <- setNames(ego_size(g, order = vcount(g), mode = "in", mindist = 1), V(g)$name)
@@ -41,6 +45,7 @@ results <- data.frame(
   mandatory_dependents = as.integer(mandatory_dependents[nodes$course]),
   betweenness = betweenness_full[nodes$course],
   harmonic_out = harmonic_out[nodes$course],
+  harmonic_out_weighted = harmonic_out_weighted[nodes$course],
   harmonic_in = harmonic_in[nodes$course],
   downstream_reach = as.integer(reach[nodes$course]),
   prerequisite_reach = as.integer(prereq_count[nodes$course]),
@@ -53,9 +58,11 @@ results <- data.frame(
 
 # Composite: mean percentile rank (0 = lowest, 1 = highest) of four foundation
 # measures. Betweenness is reported separately: it measures bridging, not
-# foundation, and is 0 for every course without prerequisites.
+# foundation, and is 0 for every course without prerequisites. The option-weighted
+# harmonic is used because unweighted harmonic and downstream reach both count
+# courses reached only through one-of options (Spearman rho 1.00 with each other).
 composite_measures <- c("weighted_out_degree", "pagerank_weighted",
-                        "harmonic_out", "downstream_reach")
+                        "harmonic_out_weighted", "downstream_reach")
 results$composite_score <- rowMeans(sapply(
   results[composite_measures],
   function(x) (rank(x) - 1) / (length(x) - 1)
