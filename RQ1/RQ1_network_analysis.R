@@ -24,18 +24,8 @@ g_rev <- reverse_edges(g)
 pagerank <- page_rank(g_rev, weights = NA)$vector
 pagerank_weighted <- page_rank(g_rev, weights = E(g_rev)$option_weight)$vector
 
-dist_out <- distances(g, mode = "out")
-dist_in <- distances(g, mode = "in")
-harmonic_out <- sapply(seq_along(V(g)), function(i) {
-  d <- dist_out[i, ]
-  sum(1 / d[d > 0 & is.finite(d)])
-})
-harmonic_in <- sapply(seq_along(V(g)), function(i) {
-  d <- dist_in[i, ]
-  sum(1 / d[d > 0 & is.finite(d)])
-})
-
-names(harmonic_out) <- names(harmonic_in) <- V(g)$name
+harmonic_out <- harmonic_centrality(g, mode = "out", weights = NA, normalized = TRUE)
+harmonic_in <- harmonic_centrality(g, mode = "in", weights = NA, normalized = TRUE)
 
 reach <- sapply(V(g)$name, function(course) {
   d <- names(subcomponent(g, course, mode = "out"))
