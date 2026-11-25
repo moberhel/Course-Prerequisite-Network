@@ -1,5 +1,5 @@
 # COSC 421 - Research Question 1
-# Which courses occupy the most central positions in the prerequisite network?
+# Which UBCO courses are the most fundamental within the prerequisite network?
 
 # Run from the repository root: Rscript RQ1/RQ1_network_analysis.R
 
@@ -58,9 +58,9 @@ results <- data.frame(
 
 # Composite: mean percentile rank (0 = lowest, 1 = highest) of four foundation
 # measures. Betweenness is reported separately: it measures bridging, not
-# foundation, and is 0 for every course without prerequisites. The option-weighted
-# harmonic is used because unweighted harmonic and downstream reach both count
-# courses reached only through one-of options (Spearman rho 1.00 with each other).
+# foundation, and is 0 for every course without prerequisites. Harmonic is
+# option-weighted because unweighted harmonic, like downstream reach, counts every
+# course reached only through one-of options as fully dependent.
 composite_measures <- c("weighted_out_degree", "pagerank_weighted",
                         "harmonic_out_weighted", "downstream_reach")
 results$composite_score <- rowMeans(sapply(
