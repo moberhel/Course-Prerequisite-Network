@@ -27,15 +27,8 @@ pagerank_weighted <- page_rank(g_rev, weights = E(g_rev)$option_weight)$vector
 harmonic_out <- harmonic_centrality(g, mode = "out", weights = NA, normalized = TRUE)
 harmonic_in <- harmonic_centrality(g, mode = "in", weights = NA, normalized = TRUE)
 
-reach <- sapply(V(g)$name, function(course) {
-  d <- names(subcomponent(g, course, mode = "out"))
-  length(setdiff(d, course))
-})
-
-prereq_count <- sapply(V(g)$name, function(course) {
-  d <- names(subcomponent(g, course, mode = "in"))
-  length(setdiff(d, course))
-})
+reach <- setNames(ego_size(g, order = vcount(g), mode = "out", mindist = 1), V(g)$name)
+prereq_count <- setNames(ego_size(g, order = vcount(g), mode = "in", mindist = 1), V(g)$name)
 
 results <- data.frame(
   course = nodes$course,
