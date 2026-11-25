@@ -51,13 +51,16 @@ results <- data.frame(
   stringsAsFactors = FALSE
 )
 
-results$composite_rank_score <- rowMeans(cbind(
-  rank(-results$betweenness, ties.method = "average"),
-  rank(-results$out_degree, ties.method = "average"),
-  rank(-results$downstream_reach, ties.method = "average"),
-  rank(-results$pagerank, ties.method = "average")
+# Composite: mean percentile rank (0 = lowest, 1 = highest) of four foundation
+# measures. Betweenness is reported separately: it measures bridging, not
+# foundation, and is 0 for every course without prerequisites.
+composite_measures <- c("weighted_out_degree", "pagerank_weighted",
+                        "harmonic_out", "downstream_reach")
+results$composite_score <- rowMeans(sapply(
+  results[composite_measures],
+  function(x) (rank(x) - 1) / (length(x) - 1)
 ))
-results <- results[order(results$composite_rank_score), ]
+results <- results[order(-results$composite_score), ]
 results$composite_rank <- seq_len(nrow(results))
 
 write.csv(results,
@@ -72,8 +75,7 @@ write.csv(top_20,
 cat("Network:", vcount(g), "courses,", ecount(g), "prerequisite edges\n")
 cat("Network is a DAG:", is_dag(g), "\n")
 cat("\nTop 20 central courses:\n")
-print(top_20[, c("composite_rank", "course", "subject", "betweenness",
-                 "out_degree", "downstream_reach", "pagerank")],
+print(top_20[, c("composite_rank", "course", composite_measures, "composite_score")],
       row.names = FALSE)
 
 theme_set(theme_minimal(base_size = 12))
