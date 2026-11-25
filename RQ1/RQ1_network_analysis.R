@@ -14,7 +14,11 @@ nodes <- course_data$nodes
 in_degree <- degree(g, mode = "in", normalized = FALSE)
 out_degree <- degree(g, mode = "out", normalized = FALSE)
 betweenness_full <- betweenness(g, directed = TRUE, normalized = TRUE)
-pagerank_full <- page_rank(g, directed = TRUE)$vector
+# PageRank on the reversed graph, so importance flows from a course back to its
+# prerequisites. weights = NA stops igraph using the raw `weight` column.
+g_rev <- reverse_edges(g)
+pagerank <- page_rank(g_rev, weights = NA)$vector
+pagerank_weighted <- page_rank(g_rev, weights = E(g_rev)$option_weight)$vector
 
 dist_out <- distances(g, mode = "out")
 dist_in <- distances(g, mode = "in")
@@ -51,7 +55,8 @@ results <- data.frame(
   harmonic_in = harmonic_in[nodes$course],
   downstream_reach = as.integer(reach[nodes$course]),
   prerequisite_reach = as.integer(prereq_count[nodes$course]),
-  pagerank = pagerank_full[nodes$course],
+  pagerank = pagerank[nodes$course],
+  pagerank_weighted = pagerank_weighted[nodes$course],
   current_calendar = nodes$in_current_calendar,
   retired = nodes$retired,
   stringsAsFactors = FALSE
