@@ -15,7 +15,9 @@ in_degree <- degree(g, mode = "in", normalized = FALSE)
 out_degree <- degree(g, mode = "out", normalized = FALSE)
 weighted_out_degree <- strength(g, mode = "out", weights = E(g)$option_weight)
 mandatory_dependents <- strength(g, mode = "out", weights = as.numeric(E(g)$hard_requirement))
-betweenness_full <- betweenness(g, directed = TRUE, normalized = TRUE)
+# weights = NA: count shortest paths in hops. By default igraph would use the raw
+# `weight` column (1/n_alternatives) as edge length, making option edges "shorter".
+betweenness_full <- betweenness(g, directed = TRUE, weights = NA, normalized = TRUE)
 # PageRank on the reversed graph, so importance flows from a course back to its
 # prerequisites. weights = NA stops igraph using the raw `weight` column.
 g_rev <- reverse_edges(g)
