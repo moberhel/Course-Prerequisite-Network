@@ -79,6 +79,17 @@ test("share = k / n_alternatives (two_of counts double, recommended is 0)", {
   stopifnot(all(e$share[e$type != "recommended"] > 0 & e$share[e$type != "recommended"] <= 1))
 })
 
+test("option_weight splits share across either/or alternatives", {
+  e <- d$edges
+  w <- function(from, to) e$option_weight[e$source == from & e$target == to & e$type == "prereq"]
+  expect_equal(w("COSC 344", "COSC 444"), 1)      # required, in every path
+  expect_equal(w("ANTH 100", "ANTH 245"), 1 / 2)  # one of 2
+  expect_equal(w("CHEM 335", "CHEM 462"), 2 / 4)  # two of 4
+  expect_equal(w("ANTH 100", "ANTH 200"), 1 / 4)  # one of 2, in 1 of 2 alternatives
+  stopifnot(!anyNA(e$option_weight))
+  stopifnot(all(e$option_weight[e$type == "recommended"] == 0))
+})
+
 test("original weight column is unchanged", {
   raw <- read.csv("Data/ubco_prereq_edges.csv", stringsAsFactors = FALSE)
   expect_equal(d$edges$weight, raw$weight)
@@ -112,7 +123,7 @@ test("matches the original RQ1 script's graph (same edge set)", {
 test("vertex and edge attributes are attached", {
   for (a in c("subject", "level", "title", "retired", "upper_level", "standing_required"))
     stopifnot(a %in% vertex_attr_names(g))
-  for (a in c("requirement", "n_alternatives", "weight", "share",
+  for (a in c("requirement", "n_alternatives", "weight", "share", "option_weight",
               "cross_department", "in_every_path", "min_grade"))
     stopifnot(a %in% edge_attr_names(g))
   expect_equal(V(g)["MATH 200"]$subject, "MATH")

@@ -43,6 +43,10 @@ as_flag <- function(x, column) {
 #   * edges$share:       fraction of the option group this edge satisfies
 #                        (k / n_alternatives, so "two of 13" edges count 2/13;
 #                        the original `weight` column is kept unchanged)
+#   * edges$option_weight: how much of the target's requirement this edge accounts
+#                        for: share, divided by alt_paths_in_course when the edge
+#                        is only in some "either (a) or (b)" alternatives
+#                        (in_every_path FALSE); 0 for recommended edges
 load_course_data <- function(data_dir = "Data") {
   nodes_file <- file.path(data_dir, "ubco_courses_nodes.csv")
   edges_file <- file.path(data_dir, "ubco_prereq_edges.csv")
@@ -69,6 +73,11 @@ load_course_data <- function(data_dir = "Data") {
     edges$type == "recommended",
     0,
     k_required / edges$n_alternatives
+  )
+  edges$option_weight <- ifelse(
+    edges$type == "recommended",
+    0,
+    ifelse(edges$in_every_path, edges$share, edges$share / edges$alt_paths_in_course)
   )
 
   list(nodes = nodes, edges = edges)

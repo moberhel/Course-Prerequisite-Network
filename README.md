@@ -18,6 +18,7 @@ What the loader adds on top of the raw CSVs:
 - True/False columns become logicals; `standing_required` is normalised (`3rd` -> `third`).
 - `nodes$retired` (56 legacy codes) and `nodes$upper_level` (300+ and in the current calendar).
 - `edges$share` = k / `n_alternatives` (a "two of 13" edge counts 2/13; `weight` is left unchanged).
+- `edges$option_weight` = how much of the target course's requirement one edge accounts for: `share`, divided by `alt_paths_in_course` when `in_every_path` is false; 0 for recommended edges. A required edge is 1, one of 4 is 0.25, and one of 2 inside one of 2 "either (a) or (b)" alternatives is 0.25.
 - Checks that every edge endpoint exists and that there are no duplicate edges of the same type and no self-loops.
 
 Generated tables and figures go in `output/tables/` and `output/figures/`.
